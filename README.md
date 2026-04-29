@@ -7,3 +7,4 @@ Repositorio del sitio corporativo de marca en turismo: contenido de planificaci�
 ## Documentación
 
 - [`docs/keyword-clusters-and-ia.md`](docs/keyword-clusters-and-ia.md) — clusters de keywords (CSV inicial), arquitectura de información recomendada y notas para citaciones en IA.
+- [`docs/content-type-url-decision.md`](docs/content-type-url-decision.md) — tabla de decisión: tipo de contenido → itineraries vs travel guides → plantilla de URL.
