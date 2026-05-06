@@ -1,0 +1,121 @@
+﻿Page type,Content template,URL example,Search intent,Target keywords,Content structure
+Homepage,Site gateway,https://tourism-tickets.com/,"Understand what the site offers at a glance (trip planning help across destinations, itineraries, and guides), build basic trust, and route visitors toward major hubs (Destinations, Itineraries, Travel guides) or a featured geography.","trip planner website; 
+vacation planning guide; 
+travel itinerary ideas; 
+where to go on holiday","1. Free text block — H1 + brand promise; 3–5 value bullets; point to Destinations, Itineraries, and Travel guides hubs.
+2. Highlights carousel — Min. 4 slides: the three hubs + one featured Region/Country PLP or itinerary; short copy per slide.
+3. Text + image — How to use the site (discover → deepen → book); one visual; max. 2 example internal links.
+4. Product cards — Only strong editorial fits; max. 6; clear See more info; tie to destinations shown above.
+5. FAQs — 4–6 short Q&As (what the site is, guide vs itinerary, updates); link to hubs or About where useful."
+About us,Institutional trust,https://tourism-tickets.com/about-us/,"Evaluate credibility and transparency (who publishes content, editorial standards, update cadence, contact/disclosure). Typically navigational/brand-driven rather than primary SEO acquisition.","about tourism tickets; 
+editorial guidelines travel site; 
+contact tourism guides","1. Free text block — H1 About; mission; what you are/are not; how to contact or flag issues (no sensitive data).
+2. Text + image — Team or process; 3–5 bullets on editorial standards and update approach.
+3. Highlights carousel — Non-sales slides only (policy, privacy, cookies, contact); neutral institutional copy.
+4. Product cards — Optional: omit entirely if nothing fits; if used, max. 3 and label sponsorship/partners clearly.
+5. FAQs — Trust/transparency (who writes, updates, affiliates/ads, corrections); link to policy slides."
+Destinations (CLP),Destination directory,https://tourism-tickets.com/destinations/,"Early-stage exploration. 
+Compare countries and macro-regions at once and drill down toward one Region PLP or Country PLP.",best holiday destinations; countries to visit; where to travel next,"1. Free text block — H1 directory framing; early-trip mindset; explain Region vs Country next steps.
+2. Highlights carousel — Mix Region PLP + Country PLP (about 6–12 slides); each slide ends on one internal URL.
+3. Text + image — Quick comparison frame (time, budget, season, pace); link out to a few illustrative PLPs.
+4. Product cards — Only destinations referenced above; keep geography consistent.
+5. FAQs — How the geo hierarchy works; where itineraries vs thematic guides live."
+Region (PLP),Region destination hub,https://tourism-tickets.com/europe/,"Browse trip styles by region. 
+Choose your favorite and then visit the Country PLP or a Region-scoped itinerary.","europe holidays; 
+europe trip planning; 
+city breaks europe","1. Free text block — H1 region + trip angle; 2–4 why-go bullets; who it suits.
+2. Highlights carousel — Prioritise Country PLPs; add 1–3 regional itinerary PDP/PLP when relevant; stay in-region.
+3. Text + image — Trip styles and seasons; moving between countries; illustrative internal links.
+4. Product cards — Spread across ≥2 countries when inventory allows.
+5. FAQs — Regional planning basics (transport, timing); defer legal detail to official sources."
+Country (PLP),Country destination hub,https://tourism-tickets.com/spain/,"Decide if the country fits the trip. 
+Use the country as your main plan, then explore its regions and cities.
+Find top highlights, the best season to visit, and trip ideas.
+Prioritize links into City PDPs.","best places to visit in spain; 
+spain travel guide; 
+tourist places in spain","1. Free text block — H1 country hub; highlights + vibe; best season summary; remind day-by-day sits in Itineraries.
+2. Highlights carousel — Mostly City PDPs; optional one slide to country itineraries index or flagship route.
+3. Text + image — National logistics (trains/car/flights), regions, suggested pace; anchor with city examples.
+4. Product cards — Top country experiences; titles tied to cities you promote.
+5. FAQs — Fit vs trip style; minimum stay; where to open full routes vs thematic tips (Travel guides)."
+City (PDP),City destination pillar,https://tourism-tickets.com/spain/barcelona/,"Plan by city. 
+Look at neighborhoods, famous spots, how to get around, and the best time to go. We also suggest side trips. Duration times are only estimates.
+Click on Itineraries PDP to see the exact day-by-day plan.","things to do in barcelona; 
+barcelona travel tips; 
+best time to visit barcelona; 
+how many days in barcelona","1. Free text block — H1 city guide; neighbourhoods + highlights; estimate timings; link city itinerary PDP for hour-by-hour.
+2. Highlights carousel — Attractions and districts with actionable internal links (anchors or related PDPs).
+3. Text + image — Getting around, best time locally, side trips; avoid duplicating a full calendar itinerary.
+4. Product cards — City-relevant tickets/experiences only.
+5. FAQs — Practical city intent (days, areas, crowds); link itinerary PDP or local guides."
+Itineraries (CLP),Itinerary hub directory,https://tourism-tickets.com/itineraries/,Discover routes before deciding on a place or duration.,"trip itinerary builder ideas; 
+multi-city vacation routes; 
+road trip itinerary examples","1. Free text block — H1 itineraries hub; what users find (duration, region, style); how to pick PLP level.
+2. Highlights carousel — Each slide = real itinerary PDP; label duration + scope (region/country/city).
+3. Text + image — Simple picker framework (duration, pace, season); light schematic visual.
+4. Product cards — Match carousel geography; avoid orphan SKUs.
+5. FAQs — Format questions (where day-by-day lives; combining routes); point to right PLP."
+Itineraries (PLP),Region itinerary index,https://tourism-tickets.com/itineraries/europe/,Browse multi-country routes for the region (Europe). Only link to Itineraries PDPs whose slug/geo matches the region (European) scope.,europe trip itinerary; backpacking europe route; multi-country europe vacation,"1. Free text block — H1 itineraries + region; state geographic scope; editorial rule: PDPs must match region.
+2. Highlights carousel — Region-scoped itinerary PDPs only; show duration on each slide.
+3. Text + image — Compare routes (effort, season, multi-city vs hub); small map-style visual.
+4. Product cards — Multi-stop passes/tours; name cities/countries touched.
+5. FAQs — Scope, shortening routes, off-season; keep visa/legal answers high-level."
+Itineraries (PLP),Country itinerary index,https://tourism-tickets.com/itineraries/spain/,"Plan a trip in one country.
+Browse durations and styles (10 days, one week, north vs south), compare headline routes, and open itineraries. Keep long “destination guide” copy, defer thematic lists to 'Travel guides'.
+Link only to Country-scoped PDPs.","spain itinerary 7 days; 
+spain road trip itinerary; 
+one week in spain","1. Free text block — H1 itineraries + country; compare durations/styles; defer thematic deep dives to Travel guides.
+2. Highlights carousel — Country-scoped itinerary PDPs only; tag north/south/coast when helpful.
+3. Text + image — Contrast route styles; short bullets; link contrasting PDP examples.
+4. Product cards — Cities that appear in listed routes; prioritise repeats.
+5. FAQs — Extend/shorten routes; where budgets/insurance topics live (Travel guides PLP)."
+Itineraries (PDP),Region multi-stop route,https://tourism-tickets.com/itineraries/scandinavia-10-days/,"Ordered itinerary.
+List stops day-by-day. Include movement, timing, and weather alternatives. Avoid long essays on specific attractions.
+Link to City PDP",scandinavia itinerary 10 days; nordic countries trip planner; scandinavia ring route,"1. Free text block — H1 route + duration + region; start/end; assumptions; timing disclaimer; link major stops to City PDPs.
+2. Numbered timeline cards — Ordered legs/days; movement + alternatives; light attraction detail only.
+3. Text + image — Logistics chunk (reorder, season plan B, apps/tickets) — not a second full timeline.
+4. Product cards — Match timeline stops; label day/city in titles where possible.
+5. FAQs — Variants/extensions seasonal tweaks for this exact route."
+Itineraries (PDP),Country multi-city route,https://tourism-tickets.com/itineraries/spain-7-days/,"Ordered itinerary.
+List stops day-by-day. Include movement, timing, and weather alternatives. Avoid long essays on specific attractions.
+Link to City PDP","spain itinerary one week; 
+7 days in spain route; 
+spain multi-city trip","1. Free text block — H1 route + country + duration; ordered city list; domestic transport assumptions; link Country PLP.
+2. Numbered timeline cards — Strict day order inside country; transfers + backup weather option.
+3. Text + image — Country logistics without turning into a thematic guide article.
+4. Product cards — Per timeline city; avoid unrelated cross-border unless on-route excursion.
+5. FAQs — Edit sequence, drop/add stops; link relevant City PDPs."
+Itineraries (PDP),City day-by-day route,https://tourism-tickets.com/itineraries/barcelona-3-days/,"City plan by the hour:
+List the top sights, where to eat, and how to get around each neighborhood. Do not add long city descriptions.
+Link to City PDP","barcelona 3 day itinerary; 
+weekend in barcelona plan; 
+three days barcelona schedule","1. Free text block — H1 short city itinerary; audience premise; prominent City PDP link for context — no full city guide repeat.
+2. Numbered timeline cards — Hour/day blocks; geography per slot; meal + transport hints; estimated timings.
+3. Text + image — Compact urban tips (queues, transport passes); max ~5 bullets.
+4. Product cards — Queue-heavy attractions; note suggested slot/day.
+5. FAQs — Rain, kids, ultra-tight schedules; tie answers to timeline."
+Travel guides (CLP),Guide topic directory,https://tourism-tickets.com/travel-guides/,"Thematic problem-solving.
+Find thematic answers, budgeting, packing, insurance health, planning before picking a geography hub.","travel tips international trips; 
+budget travel checklist; 
+how to plan a vacation","1. Free text block — H1 guides hub; thematic problems solved; when to switch to Destinations or Itineraries.
+2. Highlights carousel — Macro themes (budget, insurance, packing, family…); slides land on guide PDP/PLP.
+3. Text + image — Pre-trip checklist visual + 3–4 numbered steps.
+4. Product cards — Planning-adjacent offers only; disclose affiliation if required.
+5. FAQs — How guides relate to other hubs; filtering by topic/country."
+Travel guides (PLP),Geo-filtered article index (country),https://tourism-tickets.com/travel-guides/spain/,"Blog-style article index for that geography.
+curated grid/list of Travel guides with filters/tags (budget, insurance, transport, family).","spain travel tips; 
+budget travel spain; 
+best time to visit spain","1. Free text block — H1 guides + country; difference vs Country PLP; mention tags/filters readers can use.
+2. Highlights carousel — Country PDP guides only; copy reflects topic tag.
+3. Text + image — Start-by-profile shortcuts linking into specific PDPs.
+4. Product cards — Tie to articles listed (season, transport, etc.).
+5. FAQs — Where full itineraries live (Itineraries PLP); where city lists live (Country PLP)."
+Travel guides (PDP),Thematic article (single intent),https://tourism-tickets.com/travel-guides/spain/best-time-to-visit-barcelona/,"City (Barcelona) logistics 
+Help users choose the best days to visit by showing weather and crowd info. Keep links local.
+Link to City PDP","best time to visit barcelona; 
+barcelona weather by month; 
+barcelona crowds peak season","1. Free text block — H1 answers one intent; direct answer paragraph + assumptions; keep scope tight.
+2. Text + image — Sectioned body (months/weather/crowds/etc.); charts/visual optional; link City PDP for logistics.
+3. Highlights carousel — Related guides same geo/topic; explain why each follow-up matters.
+4. Product cards — Only when intent fits (e.g. peak-season queues); max ~4.
+5. FAQs — Same-topic long-tail; answers reference existing sections."

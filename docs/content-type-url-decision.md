@@ -1,55 +1,55 @@
-# Tabla de decisión: tipo de contenido → sección → plantilla de URL
+# Decision table: content type → section → URL template
 
-Referencia compartida para **diseño, contenido y SEO**. Dominio de ejemplo: `tourism-tickets.com`.
+Shared reference for **design, content, and SEO**. Example domain: `tourism-tickets.com`.
 
-**Convenciones**
+**Conventions**
 
-- **`[place]`:** slug geográfico canónico (ciudad, región, país o macro-zona); un solo criterio por URL (p. ej. `scandinavia`, no mezclar `scandinavian` y `scandinavia` para el mismo destino).
-- **`[duration]`:** duración en el slug (p. ej. `3-days`, `1-week`, `2-week`) — alinear con el H1 y el contenido.
-- **`[geo]`** (solo travel guides): bucket editorial para agrupar hubs (continente, país o etiqueta transversal como `global`).
-- **`[topic]`:** slug del tema / keyword principal (guías); estable en el tiempo.
+- **`[place]`:** canonical geographic slug (city, region, country, or macro-area); one criterion per URL (e.g. `scandinavia`, do not mix `scandinavian` and `scandinavia` for the same destination).
+- **`[duration]`:** duration in the slug (e.g. `3-days`, `1-week`, `2-week`) — align with the H1 and the body copy.
+- **`[geo]`** (travel guides only): editorial bucket for grouping hubs (continent, country, or cross-cutting tag such as `global`).
+- **`[topic]`:** slug for the theme / primary keyword (guides); stable over time.
 
-`/destinations/` es solo **landing distributiva**; las URLs canónicas de destino son `/[country]/` y `/[country]/[city]/` (opción B).
+`/destinations/` is **distributive landing only**; canonical destination URLs are `/[country]/` and `/[country]/[city]/` (option B).
 
 ---
 
-## Tabla principal
+## Main table
 
-| Tipo de contenido | Itineraries vs Travel guides | Plantilla de URL |
+| Content type | Itineraries vs Travel guides | URL template |
 |-------------------|------------------------------|-------------------|
-| Landing índice de destinos (solo enlaces) | Ninguna (página de hub) | `https://tourism-tickets.com/destinations/` |
-| País (hub destino: introducción, enlaces a ciudades) | Ninguna | `https://tourism-tickets.com/[country]/` |
-| Ciudad (hub destino: qué ver, enlaces a guías/itinerarios relacionados) | Ninguna | `https://tourism-tickets.com/[country]/[city]/` |
-| Hub de itinerarios para un ámbito geográfico (lista o intro amplia sin día a día obligatorio en una sola URL larga) | **Itineraries** | `https://tourism-tickets.com/itineraries/[place]/` |
-| Itinerario por días u orden temporal claro (día 1 → día N, ruta por etapas) | **Itineraries** | `https://tourism-tickets.com/itineraries/[place]-[duration]/` |
-| Road trip o ruta multi-parada con orden de visita | **Itineraries** | `https://tourism-tickets.com/itineraries/[place]-[duration]/` (definir `[place]` como la ruta; p. ej. `usa-west-coast`) |
-| Guía temática, listado o consejos **sin** cronología día a día como eje principal | **Travel guides** | `https://tourism-tickets.com/travel-guides/[geo]/[topic]/` |
-| Comparativas, rankings o listados (“best…”, “cheap…”, “top…”) sin itinerario | **Travel guides** | `https://tourism-tickets.com/travel-guides/[geo]/[topic]/` |
-| Consejos prácticos puntuales (presupuesto, transporte, equipaje, visados, seguros) | **Travel guides** | `https://tourism-tickets.com/travel-guides/[geo]/[topic]/` (`[geo]` = zona donde aplica; ver fila siguiente si es global) |
-| Tema **no** anclado a una región (p. ej. jet lag, seguro de viaje genérico) | **Travel guides** | `https://tourism-tickets.com/travel-guides/global/[topic]/` |
-| Página institucional | Ninguna | `https://tourism-tickets.com/about-us/` |
+| Destinations index landing (links only) | None (hub page) | `https://tourism-tickets.com/destinations/` |
+| Country (destination hub: intro, links to cities) | None | `https://tourism-tickets.com/[country]/` |
+| City (destination hub: what to see, links to related guides/itineraries) | None | `https://tourism-tickets.com/[country]/[city]/` |
+| Itinerary hub for a geographic scope (list or broad intro without mandatory day-by-day in one long URL) | **Itineraries** | `https://tourism-tickets.com/itineraries/[place]/` |
+| Day-by-day or clearly temporal itinerary (day 1 → day N, staged route) | **Itineraries** | `https://tourism-tickets.com/itineraries/[place]-[duration]/` |
+| Road trip or multi-stop route with visit order | **Itineraries** | `https://tourism-tickets.com/itineraries/[place]-[duration]/` (define `[place]` as the route; e.g. `usa-west-coast`) |
+| Thematic guide, list, or tips **without** day-by-day chronology as the main axis | **Travel guides** | `https://tourism-tickets.com/travel-guides/[geo]/[topic]/` |
+| Comparisons, rankings, or lists (“best…”, “cheap…”, “top…”) without an itinerary | **Travel guides** | `https://tourism-tickets.com/travel-guides/[geo]/[topic]/` |
+| Practical tips (budget, transport, luggage, visas, insurance) | **Travel guides** | `https://tourism-tickets.com/travel-guides/[geo]/[topic]/` (`[geo]` = region where it applies; see next row if global) |
+| Topic **not** tied to a region (e.g. jet lag, generic travel insurance) | **Travel guides** | `https://tourism-tickets.com/travel-guides/global/[topic]/` |
+| Institutional page | None | `https://tourism-tickets.com/about-us/` |
 
 ---
 
-## Regla rápida (una línea)
+## Quick rule (one line)
 
-Si el usuario puede seguir el contenido como **calendario o secuencia ordenada** → **Itineraries**. Si el valor está en **información, lista o tema** sin ese esqueleto → **Travel guides**.
+If the reader can follow the content as a **calendar or ordered sequence** → **Itineraries**. If the value is **information, list, or topic** without that skeleton → **Travel guides**.
 
 ---
 
-## Casos límite
+## Edge cases
 
-| Situación | Decisión |
+| Situation | Decision |
 |-----------|----------|
-| Misma zona y duración: hub `[place]/` vs pieza `[place]-[duration]/` | El hub enlaza a los itinerarios por duración; no duplicar el mismo texto en ambas URL. |
-| “3 días en Roma”: ¿itinerario o guía? | Si es **día 1 / día 2 / día 3** → itineraries (`…/itineraries/rome-3-days/` o `…/itineraries/lazio-rome-3-days/` según vuestra taxonomía). Si es **lista de ideas sin orden** → travel guides. |
-| City pillar `/italy/rome/` vs guía “mejor época en Roma” | El pillar ciudad acoge resumen + enlaces; la guía temática vive en `travel-guides/europe/best-time-to-visit-rome/` (o `[geo]` coherente con vuestra regla). |
-| Contenido transaccional futuro | Reservar rutas (`/tickets/`, checkout o subdominio) sin conflicto con `[country]` (p. ej. evitar `/us/` ambiguo; preferir `united-states`). |
+| Same area and duration: hub `[place]/` vs piece `[place]-[duration]/` | The hub links to itineraries by duration; do not duplicate the same copy across both URLs. |
+| “3 days in Rome”: itinerary or guide? | If it is **day 1 / day 2 / day 3** → itineraries (`…/itineraries/rome-3-days/` or `…/itineraries/lazio-rome-3-days/` per your taxonomy). If it is **an unordered list of ideas** → travel guides. |
+| City pillar `/italy/rome/` vs guide “best time in Rome” | The city pillar holds summary + links; the thematic guide lives at `travel-guides/europe/best-time-to-visit-rome/` (or `[geo]` consistent with your rule). |
+| Future transactional content | Reserve routes (`/tickets/`, checkout, or subdomain) without clashing with `[country]` (e.g. avoid ambiguous `/us/`; prefer `united-states`). |
 
 ---
 
 ## Changelog
 
-| Fecha | Cambio |
+| Date | Change |
 |-------|--------|
-| 2026-04-29 | Primera versión alineada con opción B en destinations y segmentos `[place]` / `[geo]` / `[topic]`. |
+| 2026-04-29 | First version aligned with option B for destinations and `[place]` / `[geo]` / `[topic]` segments. |
