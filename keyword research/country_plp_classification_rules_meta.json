@@ -1,0 +1,42 @@
+{
+  "rulebook_version": "2026-05-08",
+  "implementation": "scripts/country_plp_classification_rules.py",
+  "spain_runner": "scripts/country_plp_spain_keyword_blocks.py",
+  "country_defaults": {
+    "location_column": "Spain",
+    "things_to_do_block_pattern": "Things to do in {country}"
+  },
+  "content_block_priority": [
+    "Quick facts",
+    "FAQs",
+    "Country itineraries",
+    "Planning · Getting around",
+    "Planning · Getting around - City PDP",
+    "Things to do in Spain",
+    "Planning · Seasons",
+    "Planning · Trip ideas",
+    "Best places",
+    "Tourist attractions",
+    "Country destinations (H1)"
+  ],
+  "special_page_types": [
+    {
+      "page_type": "City PDP - day trip",
+      "when": "Keyword matches day trip / day trips"
+    }
+  ],
+  "global_exclusions": [
+    "Four-digit year in keyword text",
+    "hotel / hotels token",
+    "Spanish city or island token plus calendar month (EN/ES names)",
+    "Inter-city legs (Spanish micro-destinations, A to B patterns, or place+place+train/bus adjacent)",
+    "Package patterns (flight+hotel, villa+flight, all-inclusive, holiday package wording)",
+    "Resort/city holiday packaging without Spain country",
+    "FAQ-shaped keyword without Spain/España country anchor"
+  ],
+  "notes": [
+    "Things to do block requires Spain/Spanish/España in keyword plus activity OR food/culture/events regex.",
+    "Planning · Getting around splits to - City PDP when a city/island token appears without Spain country anchor.",
+    "Reuse: swap city token loader + country regexes for non-Spain lists."
+  ]
+}
