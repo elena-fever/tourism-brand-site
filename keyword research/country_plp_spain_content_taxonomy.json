@@ -1,0 +1,65 @@
+{
+  "page_template": "country_plp",
+  "reference_example": "web-architecture/examples/country-plp-country-example-def.html",
+  "country": "Spain",
+  "blocks": [
+    {
+      "id": "hero",
+      "label": "Hero & positioning",
+      "notes": "H1 + lede; ultra-head keywords only when no sharper slot matches.",
+      "slots": []
+    },
+    {
+      "id": "intro_line",
+      "label": "Intro cross-links strip",
+      "notes": "Rarely driven by single keywords; hub-vs-guide disambiguation.",
+      "slots": []
+    },
+    {
+      "id": "country_summary",
+      "label": "Country summary (at a glance)",
+      "slots": [
+        { "id": "vibe", "label": "Vibe" },
+        { "id": "highlights", "label": "Highlights" },
+        { "id": "sweet_spot", "label": "Sweet spot" },
+        { "id": "the_wallet", "label": "The wallet" },
+        { "id": "quick_facts", "label": "Quick facts" },
+        { "id": "overview", "label": "Summary overview / fallback" }
+      ]
+    },
+    {
+      "id": "city_hubs",
+      "label": "Best places to visit (city hubs carousel)",
+      "slots": []
+    },
+    {
+      "id": "notable_attractions",
+      "label": "Notable tourist attractions carousel",
+      "slots": []
+    },
+    {
+      "id": "planning_spain",
+      "label": "Planning Spain (transport, seasons & routes)",
+      "slots": [
+        { "id": "getting_around", "label": "Getting around" },
+        { "id": "best_season", "label": "Best season (planning depth)" },
+        { "id": "trip_ideas", "label": "Trip ideas" }
+      ]
+    },
+    {
+      "id": "itinerary_picks",
+      "label": "Itinerary picks carousel",
+      "slots": []
+    },
+    {
+      "id": "commercial_placeholder",
+      "label": "Featured tickets & tours (optional)",
+      "slots": []
+    },
+    {
+      "id": "faqs",
+      "label": "FAQs",
+      "slots": []
+    }
+  ]
+}

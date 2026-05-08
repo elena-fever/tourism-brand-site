@@ -1,0 +1,54 @@
+{
+  "description": "City PDP (Barcelona) — content_block mapping. Anchor phrases match the editorial screenshot; regex tiers extend coverage for Keyword Planner exports.",
+  "page_type": "City PDP",
+  "location_example": "Barcelona",
+  "anchor_keyword_to_block": {
+    "visit barcelona": "H1",
+    "travel to barcelona": "H1",
+    "tourism in barcelona": "H1",
+    "famous barcelona spots": "City attractions block",
+    "top spots in barcelona": "City attractions block",
+    "top attractions in barcelona": "City attractions block",
+    "barcelona things to do": "Things to do block",
+    "barcelona best things to do": "Things to do block",
+    "things to do in barcelona": "Things to do block",
+    "food in barcelona": "Things to do block",
+    "gastronomy in barcelona": "Things to do block",
+    "eating in barcelona": "Things to do block",
+    "drink in barcelona": "Things to do block",
+    "night life in barcelona": "Things to do block",
+    "art in barcelona": "Things to do block",
+    "culture in barcelona": "Things to do block",
+    "sport events in barcelona": "Things to do block",
+    "shopping in barcelona": "Things to do block",
+    "beaches in barcelona": "Things to do block",
+    "nature in barcelona": "Things to do block",
+    "neighbourhoods in barcelona": "Neighbourhoods block",
+    "how to get to barcelona": "How to get block",
+    "how to get to barcelona from airport": "How to get block",
+    "how to get to barcelona city from airport": "How to get block",
+    "how to use public transport in barcelona": "How to get block",
+    "transport in barcelona": "How to get block",
+    "barcelona itineraries": "Itineraries block",
+    "itineraries in barcelona": "Itineraries block",
+    "day trips from barcelona": "Nearby block",
+    "cities nearby barcelona": "Nearby block"
+  },
+  "classification_priority_notes": [
+    "Resolver order in code: Neighbourhoods (inc. areas to visit) → Nearby day trips → FAQ-shaped inter-city questions (how far / train-bus between cities / how to get to X from Barcelona…) → How to get (airport, how to get to Barcelona, how to use public transport, get around, other how-to-get-to … + Barcelona in keyword) → inter-city route regex → Itineraries → H1 → City attractions → Things to do (incl. must eat/try) → explore/walking/guide tails → Transport block (fares, tickets, zones, schedules/detail + city transport) → FAQ block (remaining question-shaped queries) → Unclassified.",
+    "FAQ vs How to get: generic questions → FAQ except airport/how to reach Barcelona/how to use local transport/how to get around/how to get to … + landmark/airport (with Barcelona|BCN in keyword). Inter-city phrasing stays Nearby.",
+    "Transport block: in-city metro/bus/tram/hola Barcelona/TMB etc. combined with price/fare/ticket/pass/zones or operational detail (schedules, routes, maps); generic transport in Barcelona without fare/detail stays How to get via anchors/regex.",
+    "Tag overrides (after regex): Neighbourhoods & areas → Neighbourhoods block; Sightseeing & landmarks → City attractions block.",
+    "Synonyms normalised: neighborhood/neighbourhood, nightlife/night life; transportation→transport in keyword normalisation.",
+    "Inter-city travel (e.g. Valencia–Barcelona train, how to get to Ibiza from Barcelona) maps to Nearby block; airport↔city and moving around Barcelona map to How to get block."
+  ],
+  "implementation_notes": {
+    "script": "scripts/merge_cluster_barcelona_city_pdp_keywords.py",
+    "keyword_normalisation": [
+      "NFKD + lowercase + strip; barcelone→barcelona; standalone barca→barcelona for classification.",
+      "Anchor map hits run before regex tiers."
+    ],
+    "regex_extensions": "Broad Planner variants (typos, places to visit/see, museums, paella/restaurants, beaches wording, Montserrat, metro/bcn, etc.) extend the screenshot anchors; remainder stays Unclassified for manual review.",
+    "exclusions": "Keywords matching hotel/lodging/airport-stay intent or known OTAs/chains/airlines/car-hire brands are dropped before merge (see should_exclude_keyword in merge_cluster_barcelona_city_pdp_keywords.py)."
+  }
+}

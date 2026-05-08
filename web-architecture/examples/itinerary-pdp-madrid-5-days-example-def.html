@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Madrid in 5 days — hour-by-hour itinerary &amp; schedule (Itineraries PDP example) | Tourism Tickets</title>
+  <meta name="description" content="Madrid 5-day itinerary with timed museum slots, tapas geography and metro hops—plus how to compress to a weekend in Madrid plan or a tight three days Madrid schedule. Link out to the Madrid City PDP for context." />
+  <style>
+    :root {
+      --bg: #f7f5f2;
+      --surface: #ffffff;
+      --ink: #1a1f26;
+      --muted: #5c6570;
+      --accent: #0d6e6e;
+      --accent-hover: #0a5555;
+      --accent-soft: #e6f3f3;
+      --border: #e2ddd6;
+      --radius: 12px;
+      --shadow: 0 8px 24px rgba(26, 31, 38, 0.08);
+      --font: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+      --max: 1120px;
+      --tap: 44px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 1rem;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--accent-hover); }
+
+    .ribbon {
+      background: #2a3238;
+      color: #e8eaee;
+      font-size: 0.78rem;
+      padding: 0.4rem 1rem;
+      text-align: center;
+    }
+
+    .ribbon strong { color: #b8e8e8; }
+
+    .ribbon a { color: #b8e8e8; text-decoration: none; }
+    .ribbon a:hover { text-decoration: underline; }
+
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .site-header__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0.75rem 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1.1rem;
+      font-size: 0.88rem;
+    }
+
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+
+    .hero-media {
+      position: relative;
+      min-height: min(44vh, 360px);
+      background:
+        linear-gradient(160deg, rgba(13, 110, 110, 0.52), rgba(26, 31, 38, 0.78)),
+        url("https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1600&q=80") center/cover no-repeat;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    @media (min-width: 768px) {
+      .hero-media { min-height: clamp(300px, 38vh, 440px); }
+    }
+
+    .hero-media__note {
+      position: absolute;
+      top: 0.6rem;
+      left: 0.75rem;
+      right: 0.75rem;
+      max-width: 21rem;
+      font-size: 0.66rem;
+      line-height: 1.35;
+      background: rgba(0, 0, 0, 0.72);
+      color: #dfe3e8;
+      padding: 0.4rem 0.5rem;
+      border-radius: 6px;
+      z-index: 2;
+    }
+
+    .hero-media__overlay {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(transparent, rgba(10, 12, 14, 0.9));
+      padding: 2rem 1.15rem 1.35rem;
+    }
+
+    .hero-media__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .hero-media h1 {
+      margin: 0 0 0.55rem;
+      font-size: clamp(1.45rem, 4.6vw, 2rem);
+      line-height: 1.16;
+      font-weight: 700;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-media .lede {
+      margin: 0;
+      font-size: clamp(0.88rem, 2.5vw, 1.02rem);
+      opacity: 0.95;
+      max-width: 42rem;
+    }
+
+    .intro-line {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.9rem 1.15rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .intro-line .wrap-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .wrap-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.15rem;
+    }
+
+    section.block { padding: 1.65rem 0; }
+
+    @media (min-width: 768px) {
+      section.block { padding: 2rem 0; }
+    }
+
+    .section-title {
+      font-size: clamp(1.2rem, 3.2vw, 1.4rem);
+      font-weight: 700;
+      margin: 0 0 0.4rem;
+      color: var(--ink);
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 0.93rem;
+      margin: 0 0 1.1rem;
+      max-width: 52rem;
+    }
+
+    .pdp-callout {
+      margin-top: 1.15rem;
+      padding: 1rem 1.15rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--accent);
+      background: linear-gradient(135deg, var(--accent-soft), var(--surface));
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    @media (min-width: 640px) {
+      .pdp-callout {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .pdp-callout__text {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 36rem;
+    }
+
+    .pdp-callout__text strong { color: var(--ink); }
+
+    .pdp-callout__cta {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: var(--tap);
+      padding: 0.55rem 1.25rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff !important;
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      border: none;
+    }
+
+    .pdp-callout__cta:hover {
+      background: var(--accent-hover);
+      color: #fff !important;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      counter-reset: day;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline-day {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .timeline-day__head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem 1rem;
+      padding: 1rem 1.15rem;
+      background: var(--accent-soft);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .timeline-day__badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 4.5rem;
+      min-height: 2rem;
+      padding: 0 0.65rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .timeline-day__title {
+      margin: 0;
+      font-size: clamp(1rem, 2.6vw, 1.15rem);
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .timeline-day__geo {
+      margin: 0;
+      width: 100%;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .timeline-slots {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline-slot {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.35rem 1rem;
+      padding: 0.95rem 1.15rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    @media (min-width: 720px) {
+      .timeline-slot {
+        grid-template-columns: 9.5rem 1fr;
+        align-items: start;
+      }
+    }
+
+    .timeline-slot:last-child { border-bottom: none; }
+
+    .timeline-slot__time {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    .timeline-slot__where {
+      display: block;
+      margin: 0 0 0.25rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .timeline-slot__do {
+      margin: 0 0 0.45rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .timeline-slot__hints {
+      margin: 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1rem;
+    }
+
+    .timeline-slot__hints span strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .estimate-tag {
+      display: inline-block;
+      margin-top: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 0.15rem 0.45rem;
+      border-radius: 6px;
+      background: #eef1f4;
+      border: 1px solid var(--border);
+    }
+
+    /* Attractions carousel (Country PLP / City PDP pattern) */
+    .carousel-wrap { position: relative; }
+
+    .carousel {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0.4rem 0 0.9rem;
+      margin: 0 -1.15rem;
+      padding-left: 1.15rem;
+      padding-right: 1.15rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel::-webkit-scrollbar { height: 6px; }
+    .carousel::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 99px;
+    }
+
+    .carousel-card {
+      flex: 0 0 min(270px, 82vw);
+      scroll-snap-align: start;
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .carousel-card:hover { border-color: var(--accent); }
+
+    .carousel-card__img {
+      height: 128px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .carousel-card__body {
+      padding: 0.95rem 1rem 1.05rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .carousel-card__body h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    .carousel-card__body p {
+      margin: 0;
+      font-size: 0.86rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .carousel-card__footer {
+      margin-top: 0.65rem;
+      padding-top: 0.55rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .carousel-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.45rem;
+      margin-top: -0.2rem;
+    }
+
+    .carousel-nav button {
+      min-width: var(--tap);
+      min-height: var(--tap);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 1.15rem;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .carousel-nav button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .attr-card { cursor: pointer; }
+
+    .tips-strip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .tips-strip__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 720px) {
+      .tips-strip__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .tips-strip__visual {
+      min-height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media (min-width: 720px) {
+      .tips-strip__visual { min-height: 100%; min-height: 260px; }
+    }
+
+    .tips-strip__copy {
+      padding: 1.15rem 1.2rem 1.3rem;
+    }
+
+    .tips-strip__copy h2 {
+      margin: 0 0 0.45rem;
+      font-size: 1.05rem;
+      color: var(--accent);
+    }
+
+    .tips-strip__copy ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .tips-strip__copy li { margin-bottom: 0.45rem; }
+    .tips-strip__copy li:last-child { margin-bottom: 0; }
+
+    .optional-note {
+      background: #faf8f5;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 0.65rem 0.9rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+      opacity: 0.92;
+    }
+
+    @media (min-width: 560px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 900px) {
+      .product-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .product-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem;
+      background: var(--surface);
+    }
+
+    .product-card .tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--accent);
+    }
+
+    .product-card .slot-hint {
+      display: block;
+      margin: 0.25rem 0 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--ink);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      background: var(--accent-soft);
+      width: fit-content;
+    }
+
+    .product-card h4 {
+      margin: 0.35rem 0;
+      font-size: 0.92rem;
+    }
+
+    .product-card p {
+      margin: 0 0 0.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .product-card .cta {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 0.55rem;
+      padding: 0 1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 0.9rem 0;
+      font-weight: 600;
+      font-size: 0.9rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      min-height: var(--tap);
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      color: var(--muted);
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    details[open] summary::after { content: "−"; }
+
+    .faq-a {
+      margin: 0;
+      padding: 0 0 0.95rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 0.8rem;
+    }
+
+    footer {
+      background: var(--ink);
+      color: #b8c0cc;
+      font-size: 0.8rem;
+      padding: 1.35rem 1.15rem 2rem;
+      text-align: center;
+    }
+
+    footer strong { color: #e8eaee; }
+
+    .faq-columns {
+      display: grid;
+      gap: 0 1.25rem;
+      align-items: start;
+    }
+
+    @media (min-width: 768px) {
+      .faq-columns { grid-template-columns: 1fr 1fr; }
+    }
+
+    .faq-columns__col details:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <div class="ribbon">
+    <strong>Itineraries PDP — example</strong> (Madrid · 5 days). Context &amp; barrios → <a href="https://tourism-tickets.com/spain/madrid/">Madrid City PDP</a>.
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="#">Tourism<span>Tickets</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Itineraries</a></li>
+          <li><a href="#">Travel guides</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero-media">
+    <p class="hero-media__note">
+      <strong>WP pattern:</strong> “Free text” hero — short H1; no barrio essays (those live on the City PDP).
+    </p>
+    <div class="hero-media__overlay">
+      <div class="hero-media__inner">
+        <h1>Madrid in 5 days — hour-by-hour plan</h1>
+        <p class="lede">Timed museum blocks, taper-friendly tapas geography and one rail day-trip—built for travellers who chose Madrid and now need legible hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="intro-line">
+    <div class="wrap-inner">
+      Barrio character, best-time framing and side-trip philosophy stay on the City hub—this page sequences slots only.
+    </div>
+  </div>
+
+  <main>
+    <section class="block" aria-labelledby="intro-heading">
+      <div class="wrap-inner">
+        <h2 id="intro-heading" class="section-title">Before you scroll the timeline</h2>
+        <p class="section-sub">Buffers assume metro + walking—not sprint distances. Many visitors run <strong>Days 1–3</strong> as a standalone <strong>Madrid 3 day itinerary</strong>; <strong>Days 4–5</strong> add Toledo steel and departure realism without pasting a city guide.</p>
+
+        <div class="pdp-callout" role="note">
+          <p class="pdp-callout__text"><strong>City PDP — context, not duplication.</strong> Neighbourhood snapshots, transport framing and “things to do” live on <a href="https://tourism-tickets.com/spain/madrid/">Madrid (City PDP)</a>.</p>
+          <a class="pdp-callout__cta" href="https://tourism-tickets.com/spain/madrid/">Open Madrid City PDP</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="timeline-heading">
+      <div class="wrap-inner">
+        <h2 id="timeline-heading" class="section-title">Numbered timeline — five days, hourly slots</h2>
+        <p class="section-sub">Each card is a day; rows are movable blocks. “Eat” and “Move” are hints, not reviews.</p>
+
+        <ol class="timeline">
+          <li class="timeline-day">
+            <div class="timeline-day__head">
+              <span class="timeline-day__badge">Day 1</span>
+              <h3 class="timeline-day__title">Historic core calibration → palace perimeter → La Latina taper</h3>
+              <p class="timeline-day__geo">Sol · Plaza Mayor · Palacio Real ring · La Latina</p>
+            </div>
+            <ol class="timeline-slots">
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">09:00–11:00</span>
+                <div>
+                  <span class="timeline-slot__where">Puerta del Sol → Plaza Mayor loop</span>
+                  <p class="timeline-slot__do">Light orientation only—skip deep dives; Mercado San Miguel ok as snack pass-through, not lunch anchor.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> churros / standing coffee</span><span><strong>Move:</strong> walk · metro L1/L2 hub</span></p>
+                  <span class="estimate-tag">~2h foot time · crowds rise late morning</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">11:15–13:30</span>
+                <div>
+                  <span class="timeline-slot__where">Palacio Real exterior path + Jardines de Sabatini pinch</span>
+                  <p class="timeline-slot__do">Photos + gardens unless interior ticket already booked—don’t stack throne rooms hungry.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> delay toward Latina lunch</span><span><strong>Move:</strong> walk Ópera flank</span></p>
+                  <span class="estimate-tag">interior visit +90–120 min if entered</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">14:00–16:30</span>
+                <div>
+                  <span class="timeline-slot__where">La Latina — menu del día block</span>
+                  <p class="timeline-slot__do">Sit-down cadence beats crawl fatigue; siesta hush follows—embrace slower table turns.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> weekday menú</span><span><strong>Move:</strong> walk downhill from palace rim</span></p>
+                  <span class="estimate-tag">budget siesta gap afterward</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">19:00–22:00</span>
+                <div>
+                  <span class="timeline-slot__where">Cava Baja / plaza hopping — taper tapas</span>
+                  <p class="timeline-slot__do">Early Madrid dinner skews late—start stands ~19:30 if jet-lagged; watch purse pockets on busy plazas.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> crawl + seated closer</span><span><strong>Move:</strong> walk · taxi ok night one</span></p>
+                  <span class="estimate-tag">three days Madrid schedule often mirrors Days 1–2 intensity</span>
+                </div>
+              </li>
+            </ol>
+          </li>
+
+          <li class="timeline-day">
+            <div class="timeline-day__head">
+              <span class="timeline-day__badge">Day 2</span>
+              <h3 class="timeline-day__title">Prado anchor → Reina Sofía counterweight → Huertas exhale</h3>
+              <p class="timeline-day__geo">Paseo del Prado · Museo Nacional del Prado · Museo Reina Sofía · Barrio de las Letras</p>
+            </div>
+            <ol class="timeline-slots">
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">09:30–13:00</span>
+                <div>
+                  <span class="timeline-slot__where">Museo del Prado — timed entry cluster</span>
+                  <p class="timeline-slot__do">Pick two wings max—Velázquez/Goya spine beats exhaustive catalogue guilt.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> museum café OR delay lunch</span><span><strong>Move:</strong> metro Banco de España / walk</span></p>
+                  <span class="estimate-tag">~2h30 focused halls · crowds peak midday weekends</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">13:30–15:30</span>
+                <div>
+                  <span class="timeline-slot__where">Barrio de las Letras — seated lunch</span>
+                  <p class="timeline-slot__do">Short walk resets legs before heavier contemporary halls.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> sit-down taper lunch</span><span><strong>Move:</strong> walk ≤12 min</span></p>
+                  <span class="estimate-tag">siesta alignment</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">16:30–19:30</span>
+                <div>
+                  <span class="timeline-slot__where">Museo Reina Sofía — Guernica cluster first</span>
+                  <p class="timeline-slot__do">Free-window travellers: verify evening slots—never assume walk-up silence.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> snack before entry</span><span><strong>Move:</strong> walk Prado–Reina axis</span></p>
+                  <span class="estimate-tag">~2h30 if selective floors only</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">20:30–22:30</span>
+                <div>
+                  <span class="timeline-slot__where">Huertas — low-noise dinner</span>
+                  <p class="timeline-slot__do">Swap for rooftop gin tonic only if feet agree—museum legs punish stair venues.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> single-table dinner</span><span><strong>Move:</strong> walk · L1 home</span></p>
+                  <span class="estimate-tag">weekend in Madrid plan often doubles Day 2 density</span>
+                </div>
+              </li>
+            </ol>
+          </li>
+
+          <li class="timeline-day">
+            <div class="timeline-day__head">
+              <span class="timeline-day__badge">Day 3</span>
+              <h3 class="timeline-day__title">Retiro lungs → Salamanca window → Chueca / Malasaña evening</h3>
+              <p class="timeline-day__geo">Parque del Retiro · Recoletos / Salamanca · Chueca · Malasaña</p>
+            </div>
+            <ol class="timeline-slots">
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">09:00–12:30</span>
+                <div>
+                  <span class="timeline-slot__where">Retiro — Palacio de Cristal + rowboat optional</span>
+                  <p class="timeline-slot__do">Boats queue summer Saturdays—skip if timeline slips; shade lanes east of lake.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> brunch exit toward Salamanca</span><span><strong>Move:</strong> metro Retiro / Ibiza</span></p>
+                  <span class="estimate-tag">~3h soft pacing · heat midday July</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">13:00–15:30</span>
+                <div>
+                  <span class="timeline-slot__where">Salamanca — calm lunch + passeggiata window</span>
+                  <p class="timeline-slot__do">Retail browsing optional—budget café seated escape.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> weekday lunch</span><span><strong>Move:</strong> metro Serrano / Velázquez</span></p>
+                  <span class="estimate-tag">siesta lull post-meal</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">17:30–19:30</span>
+                <div>
+                  <span class="timeline-slot__where">Optional Thyssen-Bornemisza OR Sorolla pivot</span>
+                  <p class="timeline-slot__do">Only if tickets pre-held—otherwise extend Retiro reading shade (<abbr title="see FAQs">FAQ rain swap</abbr>).</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> merienda café</span><span><strong>Move:</strong> metro Banco de España</span></p>
+                  <span class="estimate-tag">pick one small museum max</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">20:00–22:30</span>
+                <div>
+                  <span class="timeline-slot__where">Chueca → Malasaña taper crawl</span>
+                  <p class="timeline-slot__do">Standing vermouth culture peaks early evening—translate hunger into seated reservation later slot.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> tapas taper</span><span><strong>Move:</strong> walk Gran Vía chord</span></p>
+                  <span class="estimate-tag">urban nightlife surge Fri–Sat</span>
+                </div>
+              </li>
+            </ol>
+          </li>
+
+          <li class="timeline-day">
+            <div class="timeline-day__head">
+              <span class="timeline-day__badge">Day 4</span>
+              <h3 class="timeline-day__title">Toledo steel &amp; cathedral spine — full rail day</h3>
+              <p class="timeline-day__geo">Atocha · AVE / Media Distancia · Toledo casco</p>
+            </div>
+            <ol class="timeline-slots">
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">08:15–10:00</span>
+                <div>
+                  <span class="timeline-slot__where">Atocha departure — buffered ticketing</span>
+                  <p class="timeline-slot__do">Security + platform drift eats naive schedules—confirm train class gates night prior.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> station breakfast</span><span><strong>Move:</strong> Cercanías / metro Atocha</span></p>
+                  <span class="estimate-tag">~30–35 min rail · peak tourist Saturdays</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">10:15–14:00</span>
+                <div>
+                  <span class="timeline-slot__where">Toledo — cathedral + Jewish quarter lanes</span>
+                  <p class="timeline-slot__do">Uphill cobbles punish rolling luggage—daypack only (<abbr title="see FAQs">FAQ luggage</abbr>).</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> sit-down menú before heat crest</span><span><strong>Move:</strong> escalera mecánica loops + walk</span></p>
+                  <span class="estimate-tag">altitude climbs steal ~25–40 min between zones</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">15:00–17:30</span>
+                <div>
+                  <span class="timeline-slot__where">Miradores OR Alcázar exterior breathe</span>
+                  <p class="timeline-slot__do">Pick viewpoint quality over checklist interiors if legs complain.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> late snack / mazapán stop</span><span><strong>Move:</strong> urban mini-bus optional</span></p>
+                  <span class="estimate-tag">return trains tighten Sunday evenings</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">19:30–21:30</span>
+                <div>
+                  <span class="timeline-slot__where">Madrid rebound — Chamberí / Tribunal calm dinner</span>
+                  <p class="timeline-slot__do">Avoid repeating La Latina blindly—choose quieter residential taper near hotel.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> seated raciones</span><span><strong>Move:</strong> metro L1/L10</span></p>
+                  <span class="estimate-tag">early sleep before departure hygiene</span>
+                </div>
+              </li>
+            </ol>
+          </li>
+
+          <li class="timeline-day">
+            <div class="timeline-day__head">
+              <span class="timeline-day__badge">Day 5</span>
+              <h3 class="timeline-day__title">El Rastro (Sunday) OR brunch taper — MAD / Chamartin buffer</h3>
+              <p class="timeline-day__geo">La Latina · Atocha · Aeropuerto Adolfo Suárez Madrid-Barajas</p>
+            </div>
+            <ol class="timeline-slots">
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">09:30–12:30</span>
+                <div>
+                  <span class="timeline-slot__where">El Rastro flea (Sun only) OR Salamanca brunch replay</span>
+                  <p class="timeline-slot__do">If departure Monday—skip Rastro crowds; choose seated brunch + mercado browse instead.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> brunch anchor</span><span><strong>Move:</strong> metro La Latina / Tirso</span></p>
+                  <span class="estimate-tag">pickpocket vigilance high Sun AM</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">13:30–15:30</span>
+                <div>
+                  <span class="timeline-slot__where">Hotel hold checkout — final souvenir sprint</span>
+                  <p class="timeline-slot__do">No new museums—tax-free paperwork eats naive minutes.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> light lunch near hotel</span><span><strong>Move:</strong> taxi acceptable luggage</span></p>
+                  <span class="estimate-tag">explicit checkout penalties</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">16:00–18:30</span>
+                <div>
+                  <span class="timeline-slot__where">Airport transfer — Line 8 metro OR taxi tunnel variance</span>
+                  <p class="timeline-slot__do">Pad Schengen exit variability Fridays—T4 connectors confuse first-timers.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> terminal ok</span><span><strong>Move:</strong> Metro L8 / Airport Exprès</span></p>
+                  <span class="estimate-tag">MAD multi-terminal · verify airline hall</span>
+                </div>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="top-attr-heading">
+      <div class="wrap-inner">
+        <h2 id="top-attr-heading" class="section-title">Top attractions in Madrid</h2>
+        <p class="section-sub">Each card opens the official venue or city tourism site in a new tab—the whole tile is the tap/click target. Context lives on the <a href="https://tourism-tickets.com/spain/madrid/">Madrid City PDP</a>; this strip only bookmarks headline sights referenced above.</p>
+
+        <div class="carousel-wrap">
+          <div class="carousel" id="itin-attr-carousel" role="region" aria-label="Top attractions in Madrid">
+            <a class="carousel-card attr-card" href="https://www.museodelprado.es/en" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1544819283-28050679ecdb?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Museo del Prado</h3>
+                <p>Classical spine—anchor Day 2 morning; don’t chase every wing in one pass.</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://www.museoreinasofia.es/en" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1558669599-23dbdf91bb63?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Museo Reina Sofía</h3>
+                <p>Guernica cluster first—free-hour crowds swing wildly by season.</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://www.esmadrid.com/en/tourist-information/royal-palace-madrid" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Palacio Real de Madrid</h3>
+                <p>Timed throne rooms—trim Sabatini gardens if interior queues spike (Day 1).</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://www.esmadrid.com/en/tourist-information/parque-del-retiro" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1596484552993-aeed287ee705?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Parque del Retiro</h3>
+                <p>Crystal Palace + lake loop—Day 3 lungs before Salamanca brunch drift.</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://www.museothyssen.org/en/" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1564769610726-786bf5bb858f?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Museo Nacional Thyssen-Bornemisza</h3>
+                <p>Paseo del Arte trio closer—optional Day 3 slot if tickets pre-held.</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://www.realmadrid.com/en/real-madrid-stadium/tickets-stadium-tour" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1577223625816-7546fc13e5e8?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Santiago Bernabéu Stadium tour</h3>
+                <p>Sports architecture fans—metro to Santiago Bernabéu; trim elsewhere if slots slip.</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-nav">
+            <button type="button" id="itin-attr-prev" aria-label="Scroll attractions left">‹</button>
+            <button type="button" id="itin-attr-next" aria-label="Scroll attractions right">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="tips-heading">
+      <div class="wrap-inner">
+        <h2 id="tips-heading" class="section-title">Urban ops — compact tips</h2>
+        <p class="section-sub">WP “Text + image”: five bullets max.</p>
+
+        <div class="tips-strip">
+          <div class="tips-strip__grid">
+            <div class="tips-strip__visual" role="img" aria-label="Madrid Gran Vía urban corridor"
+              style="background-image:url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80');"></div>
+            <div class="tips-strip__copy">
+              <h2>Museum passes &amp; Madrid realism</h2>
+              <ul>
+                <li><strong>Paseo del Arte combo:</strong> math Prado + Reina + Thyssen against à la carte—skip if you only nail two museums (<em>Day 2 vs Day 3 optional</em>).</li>
+                <li><strong>Royal Palace vs Prado same morning?</strong> brutal—never steal security padding from timed Prado (<em>Day 1 vs Day 2</em>).</li>
+                <li><strong>Metro Multi vs Tourist pass:</strong> count airport leg + Toledo day (<em>Day 4</em> mostly rail); avoid double-buying.</li>
+                <li><strong>Toledo return rush:</strong> Sunday evening trains compress—book seats (<abbr title="see FAQs">FAQ tight schedules</abbr>).</li>
+                <li><strong>Purchase queues:</strong> official museum sites beat kiosk roulette July weekends.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="products-heading">
+      <div class="wrap-inner">
+        <h2 id="products-heading" class="section-title">Queue-heavy tickets — suggested placement</h2>
+        <p class="optional-note">Placeholder commerce — slot hints reference the timeline above.</p>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <span class="tag">Madrid</span>
+            <span class="slot-hint">Day 2 · morning anchor</span>
+            <h4>Museo del Prado timed entry</h4>
+            <p>Hold slot before promising Reina Sofía afternoon depth.</p>
+            <span class="cta">Sample tile</span>
+          </div>
+          <div class="product-card">
+            <span class="tag">Madrid</span>
+            <span class="slot-hint">Day 2 · afternoon block</span>
+            <h4>Museo Reina Sofía skip-the-line</h4>
+            <p>Guernica wing first—free-hour chaos varies by season.</p>
+            <span class="cta">Sample tile</span>
+          </div>
+          <div class="product-card">
+            <span class="tag">Madrid</span>
+            <span class="slot-hint">Day 1 · optional interior</span>
+            <h4>Palacio Real timed ticket</h4>
+            <p>If throne rooms booked—trim Sabatini photo time accordingly.</p>
+            <span class="cta">Sample tile</span>
+          </div>
+          <div class="product-card">
+            <span class="tag">Castilla-La Mancha</span>
+            <span class="slot-hint">Day 4 · Toledo peak</span>
+            <h4>Toledo cathedral combined ticket</h4>
+            <p>Queue midday Jul–Aug—align before hill climbs exhaust legs.</p>
+            <span class="cta">Sample tile</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="faq-heading">
+      <div class="wrap-inner">
+        <h2 id="faq-heading" class="section-title">FAQs — tied to the timeline</h2>
+        <p class="section-sub">Rain, family legs and compression answers map to concrete days.</p>
+
+        <div class="faq-columns">
+          <div class="faq-columns__col">
+            <details>
+              <summary>Day 3 pours rain — what moves indoors?</summary>
+              <p class="faq-a">Expand <strong>Thyssen or Sorolla</strong> inside <strong>Day 3 · 17:30 optional museum slot</strong>; shorten Retiro to Crystal Palace photo only. If storms linger, steal unfinished Prado wing time only if tickets still valid—never improvise both giants same afternoon.</p>
+            </details>
+            <details>
+              <summary>Kids under 10 — where do we slim the spine?</summary>
+              <p class="faq-a">Cut Reina Sofía to <strong>Guernica + sculpture patio</strong> (<strong>Day 2</strong>); swap <strong>Day 4 Toledo</strong> for half-day <strong>Retiro rowboats + zoo adjacency</strong> only if animal ethics align—otherwise Madrid cable-car viewpoints near Casa de Campo.</p>
+            </details>
+          </div>
+          <div class="faq-columns__col">
+            <details>
+              <summary>Weekend in Madrid only — credible trim?</summary>
+              <p class="faq-a">Run <strong>Day 1 evening taper</strong>, full <strong>Day 2 museums</strong>, and morning half of <strong>Day 3 (Retiro → brunch)</strong>; drop Toledo and Rastro. That’s a workable <strong>weekend in Madrid plan</strong> without five-day fiction.</p>
+            </details>
+            <details>
+              <summary>Is Days 1–3 basically a Madrid 3 day itinerary?</summary>
+              <p class="faq-a">Yes—core <strong>historic wedge + Prado/Reina spine + Retiro lungs</strong> form the canonical <strong>three days Madrid schedule</strong>. Treat <strong>Day 4 Toledo</strong> and <strong>Day 5 departure buffer</strong> as extensions.</p>
+            </details>
+            <details>
+              <summary>Ultra-tight flight — steal time where?</summary>
+              <p class="faq-a">Delete <strong>Day 5 Rastro</strong>; collapse <strong>Day 3 evening Chueca crawl</strong> to one reservation; never compress <strong>Prado morning security</strong> or <strong>Toledo return rail margin</strong>.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Itineraries PDP example</strong> — Canonical URL pattern <code>https://tourism-tickets.com/itineraries/madrid-5-days/</code>. Pair with Madrid City PDP (<code>city-pdp</code> once published). Mirrors <code>itinerary-pdp-barcelona-5-days-example-def.html</code> structure.</p>
+  </footer>
+
+  <script>
+    (function () {
+      function navCarousel(id, prevId, nextId, cardSelector) {
+        var el = document.getElementById(id);
+        var prev = document.getElementById(prevId);
+        var next = document.getElementById(nextId);
+        if (!el || !prev || !next) return;
+        var sel = cardSelector || ".carousel-card";
+        function step(dir) {
+          var card = el.querySelector(sel);
+          var gap = 16;
+          var w = card ? card.offsetWidth : 280;
+          el.scrollBy({ left: dir * (w + gap), behavior: "smooth" });
+        }
+        prev.addEventListener("click", function () { step(-1); });
+        next.addEventListener("click", function () { step(1); });
+      }
+
+      navCarousel("itin-attr-carousel", "itin-attr-prev", "itin-attr-next");
+    })();
+  </script>
+</body>
+</html>

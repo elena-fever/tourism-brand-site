@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barcelona in 5 days — hour-by-hour itinerary &amp; schedule (Itineraries PDP example) | Tourism Tickets</title>
+  <meta name="description" content="Barcelona 5-day itinerary with timed slots, eats and metro hops—plus how to compress to a weekend in Barcelona plan or a tight three days Barcelona schedule. Link out to the Barcelona City PDP for context." />
+  <style>
+    :root {
+      --bg: #f7f5f2;
+      --surface: #ffffff;
+      --ink: #1a1f26;
+      --muted: #5c6570;
+      --accent: #0d6e6e;
+      --accent-hover: #0a5555;
+      --accent-soft: #e6f3f3;
+      --border: #e2ddd6;
+      --radius: 12px;
+      --shadow: 0 8px 24px rgba(26, 31, 38, 0.08);
+      --font: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+      --max: 1120px;
+      --tap: 44px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 1rem;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--accent-hover); }
+
+    .ribbon {
+      background: #2a3238;
+      color: #e8eaee;
+      font-size: 0.78rem;
+      padding: 0.4rem 1rem;
+      text-align: center;
+    }
+
+    .ribbon strong { color: #b8e8e8; }
+
+    .ribbon a { color: #b8e8e8; text-decoration: none; }
+    .ribbon a:hover { text-decoration: underline; }
+
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .site-header__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0.75rem 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1.1rem;
+      font-size: 0.88rem;
+    }
+
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+
+    .hero-media {
+      position: relative;
+      min-height: min(44vh, 360px);
+      background:
+        linear-gradient(160deg, rgba(13, 110, 110, 0.52), rgba(26, 31, 38, 0.78)),
+        url("https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1600&q=80") center/cover no-repeat;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    @media (min-width: 768px) {
+      .hero-media { min-height: clamp(300px, 38vh, 440px); }
+    }
+
+    .hero-media__note {
+      position: absolute;
+      top: 0.6rem;
+      left: 0.75rem;
+      right: 0.75rem;
+      max-width: 21rem;
+      font-size: 0.66rem;
+      line-height: 1.35;
+      background: rgba(0, 0, 0, 0.72);
+      color: #dfe3e8;
+      padding: 0.4rem 0.5rem;
+      border-radius: 6px;
+      z-index: 2;
+    }
+
+    .hero-media__overlay {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(transparent, rgba(10, 12, 14, 0.9));
+      padding: 2rem 1.15rem 1.35rem;
+    }
+
+    .hero-media__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .hero-media h1 {
+      margin: 0 0 0.55rem;
+      font-size: clamp(1.45rem, 4.6vw, 2rem);
+      line-height: 1.16;
+      font-weight: 700;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-media .lede {
+      margin: 0;
+      font-size: clamp(0.88rem, 2.5vw, 1.02rem);
+      opacity: 0.95;
+      max-width: 42rem;
+    }
+
+    .intro-line {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.9rem 1.15rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .intro-line .wrap-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .wrap-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.15rem;
+    }
+
+    section.block { padding: 1.65rem 0; }
+
+    @media (min-width: 768px) {
+      section.block { padding: 2rem 0; }
+    }
+
+    .section-title {
+      font-size: clamp(1.2rem, 3.2vw, 1.4rem);
+      font-weight: 700;
+      margin: 0 0 0.4rem;
+      color: var(--ink);
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 0.93rem;
+      margin: 0 0 1.1rem;
+      max-width: 52rem;
+    }
+
+    /* Prominent City PDP cross-link */
+    .pdp-callout {
+      margin-top: 1.15rem;
+      padding: 1rem 1.15rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--accent);
+      background: linear-gradient(135deg, var(--accent-soft), var(--surface));
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    @media (min-width: 640px) {
+      .pdp-callout {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .pdp-callout__text {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 36rem;
+    }
+
+    .pdp-callout__text strong { color: var(--ink); }
+
+    .pdp-callout__cta {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: var(--tap);
+      padding: 0.55rem 1.25rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff !important;
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      border: none;
+    }
+
+    .pdp-callout__cta:hover {
+      background: var(--accent-hover);
+      color: #fff !important;
+    }
+
+    /* Numbered day timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      counter-reset: day;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline-day {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .timeline-day__head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem 1rem;
+      padding: 1rem 1.15rem;
+      background: var(--accent-soft);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .timeline-day__badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 4.5rem;
+      min-height: 2rem;
+      padding: 0 0.65rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .timeline-day__title {
+      margin: 0;
+      font-size: clamp(1rem, 2.6vw, 1.15rem);
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .timeline-day__geo {
+      margin: 0;
+      width: 100%;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .timeline-slots {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline-slot {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.35rem 1rem;
+      padding: 0.95rem 1.15rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    @media (min-width: 720px) {
+      .timeline-slot {
+        grid-template-columns: 9.5rem 1fr;
+        align-items: start;
+      }
+    }
+
+    .timeline-slot:last-child { border-bottom: none; }
+
+    .timeline-slot__time {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    .timeline-slot__where {
+      display: block;
+      margin: 0 0 0.25rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .timeline-slot__do {
+      margin: 0 0 0.45rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .timeline-slot__hints {
+      margin: 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1rem;
+    }
+
+    .timeline-slot__hints span strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .estimate-tag {
+      display: inline-block;
+      margin-top: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 0.15rem 0.45rem;
+      border-radius: 6px;
+      background: #eef1f4;
+      border: 1px solid var(--border);
+    }
+
+    /* Attractions carousel (Country PLP / City PDP pattern) */
+    .carousel-wrap { position: relative; }
+
+    .carousel {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0.4rem 0 0.9rem;
+      margin: 0 -1.15rem;
+      padding-left: 1.15rem;
+      padding-right: 1.15rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel::-webkit-scrollbar { height: 6px; }
+    .carousel::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 99px;
+    }
+
+    .carousel-card {
+      flex: 0 0 min(270px, 82vw);
+      scroll-snap-align: start;
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .carousel-card:hover { border-color: var(--accent); }
+
+    .carousel-card__img {
+      height: 128px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .carousel-card__body {
+      padding: 0.95rem 1rem 1.05rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .carousel-card__body h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    .carousel-card__body p {
+      margin: 0;
+      font-size: 0.86rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .carousel-card__footer {
+      margin-top: 0.65rem;
+      padding-top: 0.55rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .carousel-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.45rem;
+      margin-top: -0.2rem;
+    }
+
+    .carousel-nav button {
+      min-width: var(--tap);
+      min-height: var(--tap);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 1.15rem;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .carousel-nav button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .attr-card { cursor: pointer; }
+
+    /* Text + image strip */
+    .tips-strip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .tips-strip__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 720px) {
+      .tips-strip__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .tips-strip__visual {
+      min-height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media (min-width: 720px) {
+      .tips-strip__visual { min-height: 100%; min-height: 260px; }
+    }
+
+    .tips-strip__copy {
+      padding: 1.15rem 1.2rem 1.3rem;
+    }
+
+    .tips-strip__copy h2 {
+      margin: 0 0 0.45rem;
+      font-size: 1.05rem;
+      color: var(--accent);
+    }
+
+    .tips-strip__copy ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .tips-strip__copy li { margin-bottom: 0.45rem; }
+    .tips-strip__copy li:last-child { margin-bottom: 0; }
+
+    /* Products */
+    .optional-note {
+      background: #faf8f5;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 0.65rem 0.9rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+      opacity: 0.92;
+    }
+
+    @media (min-width: 560px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 900px) {
+      .product-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .product-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem;
+      background: var(--surface);
+    }
+
+    .product-card .tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--accent);
+    }
+
+    .product-card .slot-hint {
+      display: block;
+      margin: 0.25rem 0 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--ink);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      background: var(--accent-soft);
+      width: fit-content;
+    }
+
+    .product-card h4 {
+      margin: 0.35rem 0;
+      font-size: 0.92rem;
+    }
+
+    .product-card p {
+      margin: 0 0 0.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .product-card .cta {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    /* FAQs */
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 0.55rem;
+      padding: 0 1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 0.9rem 0;
+      font-weight: 600;
+      font-size: 0.9rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      min-height: var(--tap);
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      color: var(--muted);
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    details[open] summary::after { content: "−"; }
+
+    .faq-a {
+      margin: 0;
+      padding: 0 0 0.95rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 0.8rem;
+    }
+
+    footer {
+      background: var(--ink);
+      color: #b8c0cc;
+      font-size: 0.8rem;
+      padding: 1.35rem 1.15rem 2rem;
+      text-align: center;
+    }
+
+    footer strong { color: #e8eaee; }
+
+    .faq-columns {
+      display: grid;
+      gap: 0 1.25rem;
+      align-items: start;
+    }
+
+    @media (min-width: 768px) {
+      .faq-columns { grid-template-columns: 1fr 1fr; }
+    }
+
+    .faq-columns__col details:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <div class="ribbon">
+    <strong>Itineraries PDP — example</strong> (Barcelona · 5 days). Context &amp; neighbourhoods → <a href="https://tourism-tickets.com/spain/barcelona/">Barcelona City PDP</a>.
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="#">Tourism<span>Tickets</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Itineraries</a></li>
+          <li><a href="#">Travel guides</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero-media">
+    <p class="hero-media__note">
+      <strong>WP pattern:</strong> “Free text” hero — short H1; no neighbourhood essays (those live on the City PDP).
+    </p>
+    <div class="hero-media__overlay">
+      <div class="hero-media__inner">
+        <h1>Barcelona in 5 days — hour-by-hour plan</h1>
+        <p class="lede">Built for walkers who want timed slots, bite-sized geography and pragmatic eats—ideal if you already picked Barcelona and just need execution.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="intro-line">
+    <div class="wrap-inner">
+      Need barrio context, seasonal cues or side-trip framing first? That stays on the City hub—this page only sequences hours.
+    </div>
+  </div>
+
+  <main>
+    <section class="block" aria-labelledby="intro-heading">
+      <div class="wrap-inner">
+        <h2 id="intro-heading" class="section-title">Before you scroll the timeline</h2>
+        <p class="section-sub">Slots include rough transit buffers—adjust if tickets land earlier/later. Many travellers treat <strong>Days 1–3</strong> as a standalone <strong>Barcelona 3 day itinerary</strong> spine; <strong>Days 4–5</strong> add altitude and coast without repeating intro prose.</p>
+
+        <div class="pdp-callout" role="note">
+          <p class="pdp-callout__text"><strong>City PDP — context, not duplication.</strong> Barrio snapshots, “things to do” framing and best-time notes stay on <a href="https://tourism-tickets.com/spain/barcelona/">Barcelona (City PDP)</a> so this itinerary stays lean.</p>
+          <a class="pdp-callout__cta" href="https://tourism-tickets.com/spain/barcelona/">Open Barcelona City PDP</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="timeline-heading">
+      <div class="wrap-inner">
+        <h2 id="timeline-heading" class="section-title">Numbered timeline — five days, hourly slots</h2>
+        <p class="section-sub">Each card is a day; rows are moveable blocks. “Eat” and “Move” are hints, not reviews.</p>
+
+        <ol class="timeline">
+          <li class="timeline-day">
+            <div class="timeline-day__head">
+              <span class="timeline-day__badge">Day 1</span>
+              <h3 class="timeline-day__title">Gothic spine → Born lunch → waterfront sundown</h3>
+              <p class="timeline-day__geo">Barri Gòtic · El Born · Port Vell / Barceloneta edge</p>
+            </div>
+            <ol class="timeline-slots">
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">08:30–10:15</span>
+                <div>
+                  <span class="timeline-slot__where">Cathedral perimeter &amp; Plaça Sant Jaume</span>
+                  <p class="timeline-slot__do">Quiet loop before shop shutters wake; photo buffers only—no museum crawl yet.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> cortado + pastry nearby</span><span><strong>Move:</strong> walk</span></p>
+                  <span class="estimate-tag">~1h45 on foot · queues low</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">10:30–13:30</span>
+                <div>
+                  <span class="timeline-slot__where">El Born — Museu Picasso zone</span>
+                  <p class="timeline-slot__do">Timed entry if booked; otherwise galleries-to-market wandering ending near Santa Caterina.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> sit-down lunch Born (~13:30)</span><span><strong>Move:</strong> walk · ~12 min Gòtic→Born</span></p>
+                  <span class="estimate-tag">museum adds +90–120 min</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">16:00–19:00</span>
+                <div>
+                  <span class="timeline-slot__where">Port Vell → Maremàgnum breeze</span>
+                  <p class="timeline-slot__do">Low-cortex reset between lanes; optional Aquàrium only if kids locked in.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> gelato / café dockside</span><span><strong>Move:</strong> walk downhill to water</span></p>
+                  <span class="estimate-tag">~25 min Born→waterfront</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">19:30–21:30</span>
+                <div>
+                  <span class="timeline-slot__where">Barceloneta fringe — seafood conservas</span>
+                  <p class="timeline-slot__do">Reserve if weekend July; otherwise informal pintxo crawl away from loudest strip.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> dinner shellfish-forward</span><span><strong>Move:</strong> walk · L4 metro home</span></p>
+                  <span class="estimate-tag">evening sea breeze · watch ferry glare</span>
+                </div>
+              </li>
+            </ol>
+          </li>
+
+          <li class="timeline-day">
+            <div class="timeline-day__head">
+              <span class="timeline-day__badge">Day 2</span>
+              <h3 class="timeline-day__title">Sagrada Família anchor → Eixample stroll → rooftop optional</h3>
+              <p class="timeline-day__geo">Eixample Dreta · Sagrada Família · Rambla de Catalunya corridor</p>
+            </div>
+            <ol class="timeline-slots">
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">09:00–12:30</span>
+                <div>
+                  <span class="timeline-slot__where">Sagrada Família — interior + towers if ticketed</span>
+                  <p class="timeline-slot__do">Hard start beats midday heat; photography eats real minutes inside naves.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> second breakfast near temple</span><span><strong>Move:</strong> L2/L5 metro</span></p>
+                  <span class="estimate-tag">interior ~2h · towers +45–60 min</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">13:00–15:00</span>
+                <div>
+                  <span class="timeline-slot__where">Eixample — menu del día block</span>
+                  <p class="timeline-slot__do">Sit-down near diagonal avenues; avoid hopping far—siesta quiet follows.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> weekday lunch menu</span><span><strong>Move:</strong> walk ≤15 min</span></p>
+                  <span class="estimate-tag">budget ~90 min seated</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">17:30–19:30</span>
+                <div>
+                  <span class="timeline-slot__where">Passeig de Gràcia façade crawl</span>
+                  <p class="timeline-slot__do">Outside-only unless Casa Batlló / La Pedrera tickets purchased—don’t stack both blindly.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> vermouth pause</span><span><strong>Move:</strong> walk north–south axis</span></p>
+                  <span class="estimate-tag">photo pacing ~2h</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">20:00–22:00</span>
+                <div>
+                  <span class="timeline-slot__where">Rooftop or cocktail deck (seasonal)</span>
+                  <p class="timeline-slot__do">Swap for indoor jazz if queues insane—same geography, lower altitude.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> tapas flight late</span><span><strong>Move:</strong> taxi ok night heat</span></p>
+                  <span class="estimate-tag">optional · verify wind closures</span>
+                </div>
+              </li>
+            </ol>
+          </li>
+
+          <li class="timeline-day">
+            <div class="timeline-day__head">
+              <span class="timeline-day__badge">Day 3</span>
+              <h3 class="timeline-day__title">Park Güell sunrise bias → Gràcia downtime → Montjuïc sunset</h3>
+              <p class="timeline-day__geo">Gràcia · Park Güell · Montjuïc / Poble Sec</p>
+            </div>
+            <ol class="timeline-slots">
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">08:00–11:00</span>
+                <div>
+                  <span class="timeline-slot__where">Park Güell — monumental zone</span>
+                  <p class="timeline-slot__do">Early window saves harsh contrast; connect downhill walks toward Gràcia squares.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> brunch Gràcia</span><span><strong>Move:</strong> bus uphill · walk down</span></p>
+                  <span class="estimate-tag">zonified entry · ~2–3h inclusive</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">12:30–15:30</span>
+                <div>
+                  <span class="timeline-slot__where">Gràcia — slow squares</span>
+                  <p class="timeline-slot__do">Independent boutiques + shaded café seating—anti-template afternoon.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> vegetarian-forward lunch</span><span><strong>Move:</strong> walk</span></p>
+                  <span class="estimate-tag">heat hedge · siesta quiet</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">17:00–20:00</span>
+                <div>
+                  <span class="timeline-slot__where">Montjuïc — MNAC esplanade</span>
+                  <p class="timeline-slot__do">Museum interior optional; terraces give skyline payoff without extra Gaudí repetition.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> snack before climb</span><span><strong>Move:</strong> bus 150 / cable subject to wind</span></p>
+                  <span class="estimate-tag">vertical legs steal ~40–55 min</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">20:30–22:30</span>
+                <div>
+                  <span class="timeline-slot__where">Poble Sec — taper dinner</span>
+                  <p class="timeline-slot__do">Carrer Blai pintxos crawl if energy remains; otherwise single-table tasting menu nearby.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> casual pintxos</span><span><strong>Move:</strong> walk from Montjuïc funicular zone</span></p>
+                  <span class="estimate-tag">three days Barcelona schedule ends strong here</span>
+                </div>
+              </li>
+            </ol>
+          </li>
+
+          <li class="timeline-day">
+            <div class="timeline-day__head">
+              <span class="timeline-day__badge">Day 4</span>
+              <h3 class="timeline-day__title">Montserrat rhythm OR museum rebound — pick one spine</h3>
+              <p class="timeline-day__geo">Montserrat massif <em>or</em> Eixample / Born museums</p>
+            </div>
+            <ol class="timeline-slots">
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">07:45–12:30</span>
+                <div>
+                  <span class="timeline-slot__where">Montserrat — basilica + funicular option</span>
+                  <p class="timeline-slot__do">R5 train + rack railway—assume queue realism Saturdays; swap to museum spine if weather bombs (<abbr title="see FAQs">FAQ rain swap</abbr>).</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> monastery cafeteria OR pack bars</span><span><strong>Move:</strong> dedicated rail stack · ~90 min each direction</span></p>
+                  <span class="estimate-tag">half-day optimistic · full-day comfortable</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">13:30–15:30</span>
+                <div>
+                  <span class="timeline-slot__where">Return corridor — light lunch near Plaça Espanya</span>
+                  <p class="timeline-slot__do">Compression point before optional afternoon rebound.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> quick paella-or-salad split</span><span><strong>Move:</strong> metro hub</span></p>
+                  <span class="estimate-tag">buffer for rail delays</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">16:30–19:00</span>
+                <div>
+                  <span class="timeline-slot__where">Alternative: MNAC interior OR MACBA pivot</span>
+                  <p class="timeline-slot__do">If Montserrat skipped—slot absorbs blockbuster queue elsewhere without doubling Day 3 viewpoints blindly.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> café inside or nearby</span><span><strong>Move:</strong> metro L1/L3</span></p>
+                  <span class="estimate-tag">pick one museum—never both tired</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">20:00–22:00</span>
+                <div>
+                  <span class="timeline-slot__where">Eixample taper tasting</span>
+                  <p class="timeline-slot__do">Reward leg-day with seated wine pairing—early bed before coastal exit tomorrow.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> tasting menu reservation</span><span><strong>Move:</strong> taxi acceptable</span></p>
+                  <span class="estimate-tag">align luggage staging if hotel swap</span>
+                </div>
+              </li>
+            </ol>
+          </li>
+
+          <li class="timeline-day">
+            <div class="timeline-day__head">
+              <span class="timeline-day__badge">Day 5</span>
+              <h3 class="timeline-day__title">Sitges exhale OR slow Gothic revisit — fly/train buffer explicit</h3>
+              <p class="timeline-day__geo">Sitges · Garraf coast <em>or</em> Ciutat Vella tidy-ups → BCN / GRO airport</p>
+            </div>
+            <ol class="timeline-slots">
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">09:00–13:00</span>
+                <div>
+                  <span class="timeline-slot__where">Sitges — church steps + calme stroll</span>
+                  <p class="timeline-slot__do">Rodalies south (~40 min) unless Sunday frequency shrinks—verify night before.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> seaside lunch before heat peak</span><span><strong>Move:</strong> R2S / RG1 cadence</span></p>
+                  <span class="estimate-tag">weekend in Barcelona plan often drops this day—fine</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">14:30–16:30</span>
+                <div>
+                  <span class="timeline-slot__where">Alternative: luggage loop + boutique revisit Ciutat Vella</span>
+                  <p class="timeline-slot__do">Buy prints / ceramics without dragging bags—use hotel hold (<abbr title="see FAQs">FAQ kids/luggage</abbr>).</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> late snack</span><span><strong>Move:</strong> metro + walk</span></p>
+                  <span class="estimate-tag">explicit checkout timing</span>
+                </div>
+              </li>
+              <li class="timeline-slot">
+                <span class="timeline-slot__time">17:00–19:00</span>
+                <div>
+                  <span class="timeline-slot__where">Airport transfer — conservative</span>
+                  <p class="timeline-slot__do">Aerobús from Plaça Catalunya baseline—pad +90 min peak August Fridays.</p>
+                  <p class="timeline-slot__hints"><span><strong>Eat:</strong> terminal sandwich ok</span><span><strong>Move:</strong> Aerobús / taxi tunnel delays</span></p>
+                  <span class="estimate-tag">BCN security variability · Schengen vs non-Schengen split</span>
+                </div>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="top-attr-heading">
+      <div class="wrap-inner">
+        <h2 id="top-attr-heading" class="section-title">Top attractions in Barcelona</h2>
+        <p class="section-sub">Each card opens the official venue or city tourism site in a new tab—the whole tile is the tap/click target. Context lives on the <a href="https://tourism-tickets.com/spain/barcelona/">Barcelona City PDP</a>; this strip only bookmarks headline sights referenced above.</p>
+
+        <div class="carousel-wrap">
+          <div class="carousel" id="itin-attr-carousel" role="region" aria-label="Top attractions in Barcelona">
+            <a class="carousel-card attr-card" href="https://sagradafamilia.org/en/" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Sagrada Família</h3>
+                <p>Gaudí’s basilica—pair timed interiors with Eixample walks scheduled on Days 2–3.</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://parkguell.barcelona/en" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Park Güell</h3>
+                <p>Monumental zone tickets—align bus uphill with Day 3 sunrise-bias window.</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://www.casabatllo.es/en/" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1569959220744-ff553533f492?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Casa Batlló</h3>
+                <p>Modernista flagship on Passeig de Gràcia—night formats vary by season.</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://www.lapedrera.com/en" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1562883673117-8eba7b041ad5?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Casa Milà (La Pedrera)</h3>
+                <p>Rooftop chimneys and attic exhibits—don’t stack blindly with Casa Batlló same afternoon.</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://www.museupicasso.cat/en/" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1511527661048-7fe73d85e81a?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Museu Picasso</h3>
+                <p>El Born neighbour—ideal compact cultural morning before tapas drift (Day 1 pattern).</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://www.museunacional.cat/en" target="_blank" rel="noopener noreferrer">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Museu Nacional d’Art de Catalunya</h3>
+                <p>Montjuïc esplanade views—pairs with Day 3 terrace pacing or wet-day swaps.</p>
+                <span class="carousel-card__footer">External link to venue page (City site)</span>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-nav">
+            <button type="button" id="itin-attr-prev" aria-label="Scroll attractions left">‹</button>
+            <button type="button" id="itin-attr-next" aria-label="Scroll attractions right">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="tips-heading">
+      <div class="wrap-inner">
+        <h2 id="tips-heading" class="section-title">Urban ops — compact tips</h2>
+        <p class="section-sub">WP “Text + image”: five bullets max; expands FAQs without repeating hourly slots.</p>
+
+        <div class="tips-strip">
+          <div class="tips-strip__grid">
+            <div class="tips-strip__visual" role="img" aria-label="Barcelona metro platform atmosphere"
+              style="background-image:url('https://images.unsplash.com/photo-1511527661048-7fe73d85e81a?w=1200&q=80');"></div>
+            <div class="tips-strip__copy">
+              <h2>Queues, passes &amp; realism</h2>
+              <ul>
+                <li><strong>Hola Barcelona vs single T-casual:</strong> math it against Days 2–3 metro intensity—avoid buying twice mid-trip.</li>
+                <li><strong>Sagrada + Güell same calendar?</strong> doable only with staggered entries—never share identical morning DNA (<em>see Day 2 vs Day 3</em>).</li>
+                <li><strong>Cruise passenger surge:</strong> Gothic shoulders flood ~10:30–13:00—shift cathedral east earlier (<em>Day 1 slot 1</em>).</li>
+                <li><strong>Luggage:</strong> hotel hold beats dragging wheels on Montserrat (<em>Day 4</em>)—confirm night-before.</li>
+                <li><strong>Night buses:</strong> if pintxo crawl runs late, verify N-bus routes home—taxi may beat stale maps mentally.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="products-heading">
+      <div class="wrap-inner">
+        <h2 id="products-heading" class="section-title">Queue-heavy tickets — suggested placement</h2>
+        <p class="optional-note">Placeholder commerce — enable only when catalogue rules exist. Slot hints tie back to the numbered timeline above.</p>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <span class="tag">Barcelona</span>
+            <span class="slot-hint">Day 2 · morning anchor</span>
+            <h4>Sagrada Família timed entry</h4>
+            <p>Book before façade crawl; towers optional second ticket.</p>
+            <span class="cta">Sample tile</span>
+          </div>
+          <div class="product-card">
+            <span class="tag">Barcelona</span>
+            <span class="slot-hint">Day 3 · sunrise bias</span>
+            <h4>Park Güell monumental zone</h4>
+            <p>Summer weekends vanish—align bus uphill with entry window.</p>
+            <span class="cta">Sample tile</span>
+          </div>
+          <div class="product-card">
+            <span class="tag">Barcelona</span>
+            <span class="slot-hint">Day 1 · cultural spine</span>
+            <h4>Museu Picasso advance ticket</h4>
+            <p>Protects Born lunch timing—swap museum interior if rain pivot hits.</p>
+            <span class="cta">Sample tile</span>
+          </div>
+          <div class="product-card">
+            <span class="tag">Garraf</span>
+            <span class="slot-hint">Day 5 · optional exhale</span>
+            <h4>Sitges seaside lounge chairs</h4>
+            <p>Low stakes—skip if flights demand earlier compression (<em>FAQ tight schedules</em>).</p>
+            <span class="cta">Sample tile</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="faq-heading">
+      <div class="wrap-inner">
+        <h2 id="faq-heading" class="section-title">FAQs — tied to the timeline</h2>
+        <p class="section-sub">Weather, family pacing and compression questions reference concrete days above—not generic city lore.</p>
+
+        <div class="faq-columns">
+          <div class="faq-columns__col">
+            <details>
+              <summary>It rains hard on Day 4 — what swaps?</summary>
+              <p class="faq-a">Shelve Montserrat first—execute the <strong>museum rebound slot (Day 4 · 16:30)</strong> earlier with <strong>MNAC interior</strong> or push <strong>Museu Picasso</strong> from Day 1 if skipped. Keep dinner seated near a metro trunk to dry off.</p>
+            </details>
+            <details>
+              <summary>Kids under 10 — which blocks flex?</summary>
+              <p class="faq-a">Keep <strong>Day 1 waterfront</strong> and shorten <strong>Day 3 Montjuïc</strong> if meltdown risk; swap <strong>Day 4 Montserrat</strong> for MACBA + tactile workshops only if attention spans hate altitude trains.</p>
+            </details>
+          </div>
+          <div class="faq-columns__col">
+            <details>
+              <summary>I only have a weekend in Barcelona — how do I compress?</summary>
+              <p class="faq-a">Run <strong>Day 1 evening strip</strong> + full <strong>Day 2</strong> + sunrise half of <strong>Day 3 (Park Güell → brunch)</strong>; drop Montserrat and Sitges outright. That yields a credible <strong>weekend in Barcelona plan</strong> without pretending five days fit.</p>
+            </details>
+            <details>
+              <summary>Is this really a Barcelona 3 day itinerary too?</summary>
+              <p class="faq-a"><strong>Days 1–3</strong> are the canonical <strong>three days Barcelona schedule</strong> spine—dense but humane if you don’t smuggle extra museums sideways. Treat <strong>Days 4–5</strong> as altitude/coast seasoning, not prerequisites.</p>
+            </details>
+            <details>
+              <summary>Ultra-tight departure — where do I steal time?</summary>
+              <p class="faq-a">Cut <strong>Day 5 Sitges</strong> entirely; move airport buffer earlier by collapsing <strong>Day 2 rooftop optional</strong> and trimming <strong>Day 3 Poble Sec crawl</strong> to one seated dinner—never steal time from <strong>Sagrada</strong> security padding.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Itineraries PDP example</strong> — Canonical URL pattern <code>https://tourism-tickets.com/itineraries/barcelona-5-days/</code>. Pair with <code>city-pdp-barcelona-example-def.html</code>. Target queries bridge <strong>barcelona 3 day itinerary</strong>, <strong>weekend in Barcelona plan</strong> and <strong>three days Barcelona schedule</strong> without splitting templates.</p>
+  </footer>
+
+  <script>
+    (function () {
+      function navCarousel(id, prevId, nextId, cardSelector) {
+        var el = document.getElementById(id);
+        var prev = document.getElementById(prevId);
+        var next = document.getElementById(nextId);
+        if (!el || !prev || !next) return;
+        var sel = cardSelector || ".carousel-card";
+        function step(dir) {
+          var card = el.querySelector(sel);
+          var gap = 16;
+          var w = card ? card.offsetWidth : 280;
+          el.scrollBy({ left: dir * (w + gap), behavior: "smooth" });
+        }
+        prev.addEventListener("click", function () { step(-1); });
+        next.addEventListener("click", function () { step(1); });
+      }
+
+      navCarousel("itin-attr-carousel", "itin-attr-prev", "itin-attr-next");
+    })();
+  </script>
+</body>
+</html>

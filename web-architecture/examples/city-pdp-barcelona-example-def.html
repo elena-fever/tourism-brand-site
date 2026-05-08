@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barcelona travel guide: things to do, neighbourhoods & best time to visit (City PDP definitive example) | Tourism Tickets</title>
+  <meta name="description" content="Plan Barcelona by neighbourhood—things to do, travel tips, best time to visit, getting around, side trips and how many days. Day-by-day pacing lives on our Barcelona itinerary PDP." />
+  <style>
+    :root {
+      --bg: #f7f5f2;
+      --surface: #ffffff;
+      --ink: #1a1f26;
+      --muted: #5c6570;
+      --accent: #0d6e6e;
+      --accent-hover: #0a5555;
+      --accent-soft: #e6f3f3;
+      --border: #e2ddd6;
+      --radius: 12px;
+      --shadow: 0 8px 24px rgba(26, 31, 38, 0.08);
+      --font: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+      --max: 1120px;
+      --tap: 44px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 1rem;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--accent-hover); }
+
+    .ribbon {
+      background: #2a3238;
+      color: #e8eaee;
+      font-size: 0.78rem;
+      padding: 0.4rem 1rem;
+      text-align: center;
+    }
+
+    .ribbon strong { color: #b8e8e8; }
+
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .site-header__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0.75rem 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1.1rem;
+      font-size: 0.88rem;
+    }
+
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+
+    /* Hero */
+    .hero-media {
+      position: relative;
+      min-height: min(48vh, 380px);
+      background:
+        linear-gradient(160deg, rgba(13, 110, 110, 0.5), rgba(26, 31, 38, 0.75)),
+        url("https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1600&q=80") center/cover no-repeat;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    @media (min-width: 768px) {
+      .hero-media { min-height: clamp(320px, 42vh, 480px); }
+    }
+
+    .hero-media__note {
+      position: absolute;
+      top: 0.6rem;
+      left: 0.75rem;
+      right: 0.75rem;
+      max-width: 19rem;
+      font-size: 0.66rem;
+      line-height: 1.35;
+      background: rgba(0, 0, 0, 0.72);
+      color: #dfe3e8;
+      padding: 0.4rem 0.5rem;
+      border-radius: 6px;
+      z-index: 2;
+    }
+
+    .hero-media__overlay {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(transparent, rgba(10, 12, 14, 0.88));
+      padding: 2rem 1.15rem 1.35rem;
+    }
+
+    .hero-media__inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .hero-media h1 {
+      margin: 0 0 0.55rem;
+      font-size: clamp(1.5rem, 4.8vw, 2.05rem);
+      line-height: 1.18;
+      font-weight: 700;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-media .lede {
+      margin: 0;
+      font-size: clamp(0.9rem, 2.6vw, 1.05rem);
+      opacity: 0.95;
+      max-width: 40rem;
+    }
+
+    .hero-media__hub {
+      margin: 0.85rem 0 0;
+      max-width: 40rem;
+      font-size: clamp(0.72rem, 2vw, 0.82rem);
+      line-height: 1.45;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.72);
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-media__hub a {
+      color: #e4faf9;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .hero-media__hub a:hover {
+      color: #fff;
+    }
+
+    .wrap-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.15rem;
+    }
+
+    section.block { padding: 1.65rem 0; }
+
+    @media (min-width: 768px) {
+      section.block { padding: 2rem 0; }
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 0.93rem;
+      margin: 0 0 1.1rem;
+      max-width: 52rem;
+    }
+
+    /* Summary cards (reference: icon + heading row) */
+    .summary-grid-ref {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .summary-grid-ref { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .summary-grid-ref { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .summary-card-ref {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 0.95rem;
+      box-shadow: 0 4px 18px rgba(26, 31, 38, 0.06);
+    }
+
+    .summary-card-ref__head {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .summary-card-ref__icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      background: #eef1f4;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .summary-card-ref__check {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #e3f2fd;
+      border: 1px solid #90caf9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1565c0;
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .summary-card-ref__title {
+      margin: 0;
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+      padding-top: 0.15rem;
+    }
+
+    .summary-card-ref__text {
+      margin: 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.4;
+      padding-left: 0;
+    }
+
+    @media (min-width: 1024px) {
+      .summary-card-ref__text { padding-left: calc(40px + 0.65rem); }
+    }
+
+    .summary-card-ref__list {
+      margin: 0;
+      padding-left: 1rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .summary-card-ref__list li { margin-bottom: 0.25rem; }
+    .summary-card-ref__list li:last-child { margin-bottom: 0; }
+
+    @media (min-width: 1024px) {
+      .summary-card-ref__list { padding-left: calc(40px + 0.65rem + 1.15rem); }
+    }
+
+    /* Things to do — image + text tiles (no links) */
+    .things-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 560px) {
+      .things-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .things-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .things-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(26, 31, 38, 0.06);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .things-card__img {
+      height: 132px;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .things-card__img-el {
+      width: 100%;
+      height: 132px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .things-card__body {
+      padding: 0.95rem 1rem 1.05rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .things-card__body h3 {
+      margin: 0 0 0.45rem;
+      font-size: 0.98rem;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+
+    .things-card__body p {
+      margin: 0;
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    /* Itinerary recommendation carousel */
+    .reco-carousel {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0.4rem 0 0.85rem;
+      margin: 0 -1.15rem;
+      padding-left: 1.15rem;
+      padding-right: 1.15rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .reco-carousel::-webkit-scrollbar { height: 6px; }
+    .reco-carousel::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 99px;
+    }
+
+    @media (min-width: 1100px) {
+      .reco-carousel--grid-lg {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        overflow-x: visible;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        scroll-snap-type: none;
+      }
+
+      .reco-carousel--grid-lg .reco-card {
+        flex: none;
+        width: auto;
+        min-width: 0;
+      }
+
+      .reco-grid-wrap .carousel-nav {
+        display: none;
+      }
+    }
+
+    .reco-card__heading {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+
+    .reco-card {
+      flex: 0 0 min(280px, 86vw);
+      scroll-snap-align: start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .reco-card:hover {
+      border-color: var(--accent);
+      color: var(--ink);
+    }
+
+    .reco-card:visited { color: var(--ink); }
+
+    .reco-card__img {
+      height: 140px;
+      background-size: cover;
+      background-position: center;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .reco-card__body {
+      padding: 1rem 1.05rem 1.1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .reco-card__scenario {
+      margin: 0 0 0.65rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .reco-card__rec {
+      margin: 0 0 0.75rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .reco-card__rec strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .reco-features {
+      margin: 0 0 1rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .reco-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+      line-height: 1.35;
+    }
+
+    .reco-features li:last-child { margin-bottom: 0; }
+
+    .reco-features__dot {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #e3f2fd;
+      border: 1px solid #64b5f6;
+      margin-top: 0.12rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      color: #1565c0;
+      font-weight: 700;
+    }
+
+    .reco-card__cta {
+      margin-top: auto;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.65rem 1rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff !important;
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .reco-card__cta:hover {
+      background: var(--accent-hover);
+      color: #fff !important;
+    }
+
+    .tab-panel-visual--transport {
+      min-height: 220px;
+    }
+
+    @media (min-width: 720px) {
+      .tab-panel-visual--transport { min-height: 280px; }
+    }
+
+    /* H2 section titles */
+    .section-title {
+      font-size: clamp(1.2rem, 3.2vw, 1.4rem);
+      font-weight: 700;
+      margin: 0 0 0.4rem;
+      color: var(--ink);
+    }
+
+    /* Carousel cities */
+    .carousel-wrap { position: relative; }
+
+    .carousel {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0.4rem 0 0.9rem;
+      margin: 0 -1.15rem;
+      padding-left: 1.15rem;
+      padding-right: 1.15rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel::-webkit-scrollbar { height: 6px; }
+    .carousel::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 99px;
+    }
+
+    .carousel-card {
+      flex: 0 0 min(270px, 82vw);
+      scroll-snap-align: start;
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .carousel-card:hover {
+      border-color: var(--accent);
+    }
+
+    .carousel-card__img {
+      height: 128px;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .carousel-card__img img {
+      width: 100%;
+      height: 128px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .carousel-card__body {
+      padding: 0.95rem 1rem 1.05rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .carousel-card__body h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    .carousel-card__body p {
+      margin: 0;
+      font-size: 0.86rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .carousel-card__footer {
+      margin-top: 0.65rem;
+      padding-top: 0.55rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .carousel-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.45rem;
+      margin-top: -0.2rem;
+    }
+
+    .carousel-nav button {
+      min-width: var(--tap);
+      min-height: var(--tap);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 1.15rem;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .carousel-nav button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Attractions: full-card link, footer label only */
+    .attr-card { cursor: pointer; }
+
+    div.carousel-card { cursor: default; }
+
+    /* Tabs */
+    .tab-module {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .tab-module [role="tablist"] {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid var(--border);
+      background: var(--accent-soft);
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (min-width: 640px) {
+      .tab-module [role="tablist"] { flex-direction: row; }
+    }
+
+    .tab-module [role="tab"] {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 0.85rem 0.75rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--muted);
+      border-bottom: 3px solid transparent;
+      min-height: var(--tap);
+      text-align: left;
+    }
+
+    @media (min-width: 640px) {
+      .tab-module [role="tab"] { text-align: center; }
+    }
+
+    .tab-module [role="tab"][aria-selected="true"] {
+      color: var(--ink);
+      background: var(--surface);
+      border-bottom-color: var(--accent);
+    }
+
+    .tab-module [role="tab"]:hover {
+      color: var(--accent);
+    }
+
+    .tab-module [role="tabpanel"] {
+      display: none;
+      padding: 0;
+    }
+
+    .tab-module [role="tabpanel"].is-active { display: block; }
+
+    .tab-panel-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 720px) {
+      .tab-panel-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .tab-panel-visual {
+      min-height: 200px;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .tab-panel-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 200px;
+      object-fit: cover;
+      display: block;
+      vertical-align: middle;
+    }
+
+    @media (min-width: 720px) {
+      .tab-panel-visual { min-height: 100%; min-height: 260px; }
+      .tab-panel-visual img { min-height: 260px; }
+    }
+
+    .tab-panel-copy {
+      padding: 1.1rem 1.2rem 1.25rem;
+    }
+
+    .tab-panel-copy h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.02rem;
+      color: var(--accent);
+    }
+
+    .tab-panel-copy p,
+    .tab-panel-copy ul {
+      margin: 0 0 0.65rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .tab-panel-copy ul { padding-left: 1.15rem; }
+
+    /* Optional products */
+    .optional-note {
+      background: #faf8f5;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 0.65rem 0.9rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+      opacity: 0.92;
+    }
+
+    @media (min-width: 560px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 900px) {
+      .product-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .product-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem;
+      background: var(--surface);
+    }
+
+    .product-card .tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--accent);
+    }
+
+    .product-card h4 {
+      margin: 0.35rem 0;
+      font-size: 0.92rem;
+    }
+
+    .product-card p {
+      margin: 0 0 0.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .product-card .cta {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    /* FAQs */
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 0.55rem;
+      padding: 0 1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 0.9rem 0;
+      font-weight: 600;
+      font-size: 0.9rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      min-height: var(--tap);
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      color: var(--muted);
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    details[open] summary::after { content: "−"; }
+
+    .faq-a {
+      margin: 0;
+      padding: 0 0 0.95rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 0.8rem;
+    }
+
+    footer {
+      background: var(--ink);
+      color: #b8c0cc;
+      font-size: 0.8rem;
+      padding: 1.35rem 1.15rem 2rem;
+      text-align: center;
+    }
+
+    footer strong { color: #e8eaee; }
+
+    /* FAQs — two columns on wider screens */
+    .faq-columns {
+      display: grid;
+      gap: 0 1.25rem;
+      align-items: start;
+    }
+
+    @media (min-width: 768px) {
+      .faq-columns {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .faq-columns__col details:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="ribbon">
+    <strong>City PDP — definitive layout</strong> (Barcelona). Earlier exploratory draft: <code>city-pdp-barcelona-example-v2.html</code> · Itineraries → <a href="https://tourism-tickets.com/itineraries/barcelona-3-days/" style="color:#b8e8e8;">Barcelona itinerary PDP</a>.
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="#">Tourism<span>Tickets</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Itineraries</a></li>
+          <li><a href="#">Travel guides</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero-media">
+    <p class="hero-media__note">
+      <strong>Copy / media:</strong> Swap for brand video (muted, loop, playsinline) or licensed still. Keep title legibility in lower third.
+    </p>
+    <div class="hero-media__overlay">
+      <div class="hero-media__inner">
+        <h1>Barcelona: things to do, neighbourhoods &amp; how to plan your stay</h1>
+        <p class="lede">Mediterranean light on sandstone blocks, Modernisme vaulting toward the sky, and barrios that still feel like villages tucked inside a metropolis—Barcelona asks you to slow down: vermouth hour in Gràcia, late shadows in the Gothic grid, salt on your skin after a Barceloneta dip. Let the city set the rhythm.</p>
+        <p class="hero-media__hub">Venues &amp; practical booking → <a href="https://barcelonatourismtickets.com/">Barcelona tourism tickets</a></p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="block">
+      <div class="wrap-inner">
+        <div class="summary-grid-ref" aria-label="Barcelona at a glance">
+          <article class="summary-card-ref">
+            <div class="summary-card-ref__head">
+              <div class="summary-card-ref__icon" aria-hidden="true"><span class="summary-card-ref__check">✓</span></div>
+              <h2 class="summary-card-ref__title">Neighbourhoods first</h2>
+            </div>
+            <ul class="summary-card-ref__list">
+              <li>Gothic · Born · Eixample</li>
+              <li>Gràcia · Barceloneta</li>
+              <li>Montjuïc pinch days</li>
+            </ul>
+          </article>
+          <article class="summary-card-ref">
+            <div class="summary-card-ref__head">
+              <div class="summary-card-ref__icon" aria-hidden="true"><span class="summary-card-ref__check">✓</span></div>
+              <h2 class="summary-card-ref__title">Signature sights</h2>
+            </div>
+            <p class="summary-card-ref__text">Gaudí interiors and Old Town wanders reward patience—book headline slots before you commit dinner tables or rooftop sunsets.</p>
+          </article>
+          <article class="summary-card-ref">
+            <div class="summary-card-ref__head">
+              <div class="summary-card-ref__icon" aria-hidden="true"><span class="summary-card-ref__check">✓</span></div>
+              <h2 class="summary-card-ref__title">Best time windows</h2>
+            </div>
+            <p class="summary-card-ref__text">Shoulder: Apr–Jun &amp; mid-Sep–Oct. Peak heat/cruise: Jul–Aug.</p>
+          </article>
+          <article class="summary-card-ref">
+            <div class="summary-card-ref__head">
+              <div class="summary-card-ref__icon" aria-hidden="true"><span class="summary-card-ref__check">✓</span></div>
+              <h2 class="summary-card-ref__title">Side trips</h2>
+            </div>
+            <ul class="summary-card-ref__list">
+              <li>Montserrat · Sitges · Girona</li>
+              <li>Tarragona · Costa Brava dips</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap-inner">
+        <h2 class="section-title">Famous Barcelona spots</h2>
+        <p class="section-sub">Whole-card taps open venue guides on Barcelona Tourism Tickets—mirror your WP block pattern from the Country PLP reference.</p>
+
+        <div class="carousel-wrap">
+          <div class="carousel" id="attr-carousel" role="region" aria-label="Signature Barcelona venues">
+            <a class="carousel-card attr-card" href="https://barcelonatourismtickets.com/sagrada-familia/">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Sagrada Família</h3>
+                <p>Baseline blockbuster—pair towers climb days with gentle neighbourhood walks.</p>
+                <span class="carousel-card__footer">Venue page · Barcelona Tourism Tickets</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://barcelonatourismtickets.com/park-guell/">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Park Güell</h3>
+                <p>Monumental zone tickets vanish early July–August—sunrise slots photograph calmly.</p>
+                <span class="carousel-card__footer">Venue page · Barcelona Tourism Tickets</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://barcelonatourismtickets.com/casa-batllo/">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1569959220744-ff553533f492?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Casa Batlló</h3>
+                <p>Night experiences vary seasonally—confirm roster before promising rooftop cocktails.</p>
+                <span class="carousel-card__footer">Venue page · Barcelona Tourism Tickets</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://barcelonatourismtickets.com/museu-picasso/">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1511527661048-7fe73d85e81a?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Museu Picasso</h3>
+                <p>Born neighbour—ideal compressed cultural morning before tapas drift.</p>
+                <span class="carousel-card__footer">Venue page · Barcelona Tourism Tickets</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://barcelonatourismtickets.com/mnac/">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Museu Nacional d’Art de Catalunya</h3>
+                <p>Montjuïc staircase icon—align with magic fountain timings when performances return.</p>
+                <span class="carousel-card__footer">Venue page · Barcelona Tourism Tickets</span>
+              </div>
+            </a>
+            <a class="carousel-card attr-card" href="https://barcelonatourismtickets.com/camp-nou-experience/">
+              <div class="carousel-card__img" style="background-image:url('https://images.unsplash.com/photo-1577223625816-7546fc13e5e8?w=800&q=80');"></div>
+              <div class="carousel-card__body">
+                <h3>Spotify Camp Nou experience</h3>
+                <p>Sports architecture fans—metro reaches Les Corts faster than map sketches imply.</p>
+                <span class="carousel-card__footer">Venue page · Barcelona Tourism Tickets</span>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-nav">
+            <button type="button" id="attr-prev" aria-label="Scroll attractions left">‹</button>
+            <button type="button" id="attr-next" aria-label="Scroll attractions right">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="things-do-heading">
+      <div class="wrap-inner">
+        <h2 id="things-do-heading" class="section-title">Things to do in Barcelona</h2>
+        <p class="section-sub">Four thematic snapshots—no outbound links. Pair with the neighbourhood grid below.</p>
+
+        <div class="things-grid">
+          <article class="things-card">
+            <div class="things-card__img">
+              <img class="things-card__img-el" src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80" width="800" height="532" loading="lazy" decoding="async" alt="Tapas and pintxos spread on a bar counter" />
+            </div>
+            <div class="things-card__body">
+              <h3>Eat &amp; drink</h3>
+              <p>Vermouth-hour rituals in Gràcia, <em>cañas</em> with anchovy montaditos in La Barceloneta, tasting menus in Eixample, and late granite pours in El Born. Track Santa Caterina and Boqueria for market lunches—but favour weekday counters when cruise crowds peak.</p>
+            </div>
+          </article>
+          <article class="things-card">
+            <div class="things-card__img">
+              <img class="things-card__img-el" src="https://images.unsplash.com/photo-1549887554-5bd913ddd596?w=800&q=80" width="800" height="532" loading="lazy" decoding="async" alt="Visitors in a bright museum gallery" />
+            </div>
+            <div class="things-card__body">
+              <h3>Art &amp; culture</h3>
+              <p>Beyond blockbuster museums, weave in MACBA or CCCB for contemporary pivots, the Gran Teatre del Liceu for opera prestige, smaller halls near Universitat for Catalan indie theatre, and late-night jazz caves around El Raval when blockbuster legs need softer acoustics.</p>
+            </div>
+          </article>
+          <article class="things-card">
+            <div class="things-card__img">
+              <img class="things-card__img-el" src="https://images.unsplash.com/photo-1577223625816-7546fc13e5e8?w=800&q=80" width="800" height="532" loading="lazy" decoding="async" alt="Football stadium bowls and seating Barcelona" />
+            </div>
+            <div class="things-card__body">
+              <h3>Sport &amp; crowds</h3>
+              <p>Camp Nou tours anchor football pilgrims; Olympic harbour sails suit breezier afternoons. If Formula 1 weekend overlaps Montmeló, expect metro swell toward Marina stops—budget realism against marathon Sundays closing Via Laietana corridors.</p>
+            </div>
+          </article>
+          <article class="things-card">
+            <div class="things-card__img">
+              <img class="things-card__img-el" src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&q=80" width="800" height="532" loading="lazy" decoding="async" alt="Urban Mediterranean beach promenade Barcelona" />
+            </div>
+            <div class="things-card__body">
+              <h3>Shopping, beaches &amp; nature</h3>
+              <p>Passeig de Gràcia and Diagonal flagships taper into Born boutiques; Els Encants flea rewards hunters mid-week. Urban beaches run Noucelinia sand volleyball vibes north toward Forum reefs; breeze-less afternoons bolt toward Collserola ridge hikes or Tibidabo vistas above Sarrià.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="barrios-heading">
+      <div class="wrap-inner">
+        <h2 id="barrios-heading" class="section-title">Barcelona neighbourhoods</h2>
+        <p class="section-sub">Four anchor districts — same card layout as “Things to do” above. Illustrative only.</p>
+
+        <div class="things-grid">
+          <article class="things-card">
+            <div class="things-card__img">
+              <img class="things-card__img-el" src="https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80" width="800" height="532" loading="lazy" decoding="async" alt="Barcelona Gothic Quarter narrow lanes and cathedral spires" />
+            </div>
+            <div class="things-card__body">
+              <h3>Gothic Quarter</h3>
+              <p>Ring the cathedral first light if you can—the cloister and chapels absorb time fast, and adjoining King’s Square fills quickly once walking tours arrive. Roman wall fragments and medieval arches thread toward Plaça Sant Jaume; the Jewish Quarter lanes tighten into staircases where GPS jitter is normal, so favour orientation by landmarks. Sunset rooftop bars uphill toward El Born reward tired legs; budget cobbles and occasional street closures during festivals.</p>
+            </div>
+          </article>
+          <article class="things-card">
+            <div class="things-card__img">
+              <img class="things-card__img-el" src="https://images.unsplash.com/photo-1511527661048-7fe73d85e81a?w=800&q=80" width="800" height="532" loading="lazy" decoding="async" alt="Arcaded streets El Born Barcelona" />
+            </div>
+            <div class="things-card__body">
+              <h3>El Born</h3>
+              <p>Museu Picasso sits here—timed tickets pair cleanly with Santa Caterina market lunches under its candy-striped roof. By afternoon, drift toward design studios and small galleries along Carrer Montcada’s medieval palazzos; evenings favour pintxo hops beneath stone arches where terraces spill onto lanes. It’s compact enough for museum-plus-shopping days without crossing the whole city, yet queues still spike weekends—build cushion before dinner commitments elsewhere.</p>
+            </div>
+          </article>
+          <article class="things-card">
+            <div class="things-card__img">
+              <img class="things-card__img-el" src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=800&q=80" width="800" height="532" loading="lazy" decoding="async" alt="Modernista architecture Park Güell mosaic terrace colour" />
+            </div>
+            <div class="things-card__body">
+              <h3>Eixample</h3>
+              <p>The chamfered grid strings modernista façades—Passeig de Gràcia alone stacks Casa Batlló, Casa Amatller and La Pedrera within slow photo stroll distance. Morning interiors beat noon heat; afternoons suit café terraces along Rambla de Catalunya or Consell de Cent tapas strips. Crossing blocks eats more minutes than maps imply—especially between diagonal avenues—so anchor ticket slots before promising harbour sunsets the same evening.</p>
+            </div>
+          </article>
+          <article class="things-card">
+            <div class="things-card__img">
+              <img class="things-card__img-el" src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&q=80" width="800" height="532" loading="lazy" decoding="async" alt="Barceloneta beachfront Mediterranean" />
+            </div>
+            <div class="things-card__body">
+              <h3>Barceloneta</h3>
+              <p>This wedge between port and sand delivers seafood conservas, rowing-club silhouettes and breezy boardwalk miles—ideal reset days between Gothic climbs or Eixample museum blocks. Mid-summer crowds thicken toward Sant Sebastià; quieter stretches appear north toward Forum reef pockets when winds cooperate. Metro hops back to city hotels stay short, but salty evenings run late—factor showers before rooftop dress codes uptown.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="how-arrive-heading">
+      <div class="wrap-inner">
+        <h2 id="how-arrive-heading" class="section-title">How to get to Barcelona</h2>
+        <p class="section-sub">Arrival logistics only—each tab explains how to reach the historic centre / Eixample belt once you land or dock.</p>
+
+        <div class="tab-module">
+          <div role="tablist" aria-label="How to get to Barcelona">
+            <button type="button" role="tab" id="tab-arr-1" aria-selected="true" aria-controls="panel-arr-1">Airport</button>
+            <button type="button" role="tab" id="tab-arr-2" aria-selected="false" aria-controls="panel-arr-2">Train</button>
+            <button type="button" role="tab" id="tab-arr-3" aria-selected="false" aria-controls="panel-arr-3">Bus</button>
+            <button type="button" role="tab" id="tab-arr-4" aria-selected="false" aria-controls="panel-arr-4">Car</button>
+          </div>
+          <div role="tabpanel" id="panel-arr-1" class="is-active" aria-labelledby="tab-arr-1">
+            <div class="tab-panel-grid">
+              <div class="tab-panel-visual tab-panel-visual--transport">
+                <img
+                  src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80"
+                  alt="Airport runway and aircraft — arriving into Barcelona"
+                  width="1200"
+                  height="675"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="tab-panel-copy">
+                <h3>Josep Tarradellas Barcelona–El Prat (BCN)</h3>
+                <p><strong>Aerobús</strong> → Plaça Catalunya in ~35 min (traffic dependent); best with luggage.</p>
+                <p><strong>Metro L9 Sud</strong> (both terminals) → change at Torrassa / Collblanc for <strong>L1 / L5</strong> toward Gothic or Eixample.</p>
+                <p><strong>Taxi / rideshare</strong> → centre ~25–40 min; factor tunnel tolls and peak queues.</p>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" id="panel-arr-2" aria-labelledby="tab-arr-2">
+            <div class="tab-panel-grid">
+              <div class="tab-panel-visual tab-panel-visual--transport">
+                <img
+                  src="https://images.unsplash.com/photo-1474487548417-781cb714be38?w=1200&q=80"
+                  alt="High-speed train station platform"
+                  width="1200"
+                  height="675"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="tab-panel-copy">
+                <h3>Barcelona Sants &amp; other rail hubs</h3>
+                <p><strong>Sants</strong>: <strong>L3</strong> east to Liceu / Drassanes (Gothic edge) ~15 min ride + walking.</p>
+                <p><strong>L5</strong> from Sants suits Eixample / Sagrada-adjacent stays.</p>
+                <p><strong>Estació de França</strong> (some regionals) → short walk or Metro to Born.</p>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" id="panel-arr-3" aria-labelledby="tab-arr-3">
+            <div class="tab-panel-grid">
+              <div class="tab-panel-visual tab-panel-visual--transport">
+                <img
+                  src="https://images.unsplash.com/photo-1570125439268-d39148fd0999?w=1200&q=80"
+                  alt="Coach bus at terminal"
+                  width="1200"
+                  height="675"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="tab-panel-copy">
+                <h3>Coach arrivals</h3>
+                <p><strong>Estació del Nord</strong> → beside Arc de Triomf; <strong>L1</strong> or ~12 min walk toward Born.</p>
+                <p><strong>Sants bus docks</strong> → follow signage into the same Metro interchange as AVE passengers.</p>
+                <p>Night arrivals: favour lit taxi ranks if unfamiliar with last-mile streets.</p>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" id="panel-arr-4" aria-labelledby="tab-arr-4">
+            <div class="tab-panel-grid">
+              <div class="tab-panel-visual tab-panel-visual--transport">
+                <img
+                  src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&q=80"
+                  alt="Highway toward city — driving into Barcelona"
+                  width="1200"
+                  height="675"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="tab-panel-copy">
+                <h3>Driving in</h3>
+                <p><strong>Ronda Litoral / Dalt</strong> ring roads funnel airport &amp; Costa Brava traffic.</p>
+                <p>Historic centre: scarce street parking — budget garage nights near Port Vell or Eixample.</p>
+                <p>Events / marathon weekends may close inner grids — check park-and-ride near Marina metro.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap-inner">
+        <h2 class="section-title">When you’re ready for the hour-by-hour plan</h2>
+        <p class="section-sub">This City PDP stays strategic; <strong>Itineraries PDP</strong> owns sunrise slots, museum buffers and dinner reservations in sequence.</p>
+
+        <div class="carousel-wrap reco-grid-wrap">
+          <div class="reco-carousel reco-carousel--grid-lg" id="route-carousel" role="region" aria-label="Barcelona itinerary picks">
+            <a class="reco-card" href="https://tourism-tickets.com/itineraries/barcelona-3-days/">
+              <div class="reco-card__img" style="background-image:url('https://images.unsplash.com/photo-1562883673117-8eba7b041ad5?w=900&q=80');"></div>
+              <div class="reco-card__body">
+                <h3 class="reco-card__heading">Barcelona in 3 days</h3>
+                <p class="reco-card__rec">We recommend: <strong>Barcelona in 3 days</strong></p>
+                <ul class="reco-features">
+                  <li><span class="reco-features__dot" aria-hidden="true">✓</span> Hour-by-hour city spine — Gaudí, Gothic belt, one waterfront exhale.</li>
+                  <li><span class="reco-features__dot" aria-hidden="true">✓</span> Transfer buffers you can trust versus optimistic maps.</li>
+                </ul>
+                <span class="reco-card__cta">Open itinerary PDP</span>
+              </div>
+            </a>
+            <a class="reco-card" href="https://tourism-tickets.com/itineraries/catalonia/">
+              <div class="reco-card__img" style="background-image:url('https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=900&q=80');"></div>
+              <div class="reco-card__body">
+                <h3 class="reco-card__heading">Catalonia tour</h3>
+                <p class="reco-card__rec">We recommend: <strong>Catalonia tour</strong></p>
+                <ul class="reco-features">
+                  <li><span class="reco-features__dot" aria-hidden="true">✓</span> Multi-stop Catalunya pacing beyond a single-barcelona bubble.</li>
+                  <li><span class="reco-features__dot" aria-hidden="true">✓</span> Honest rail or hire-car splits across mountains &amp; coast.</li>
+                </ul>
+                <span class="reco-card__cta">View itinerary</span>
+              </div>
+            </a>
+            <a class="reco-card" href="https://tourism-tickets.com/itineraries/costa-brava-beaches/">
+              <div class="reco-card__img" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80');"></div>
+              <div class="reco-card__body">
+                <h3 class="reco-card__heading">Best beaches in Costa Brava</h3>
+                <p class="reco-card__rec">We recommend: <strong>Best beaches in Costa Brava</strong></p>
+                <ul class="reco-features">
+                  <li><span class="reco-features__dot" aria-hidden="true">✓</span> Coastal hops north — calas, hikes and sunset towns sequenced.</li>
+                  <li><span class="reco-features__dot" aria-hidden="true">✓</span> Swim-window realism vs inland monument legs.</li>
+                </ul>
+                <span class="reco-card__cta">View itinerary</span>
+              </div>
+            </a>
+            <a class="reco-card" href="https://tourism-tickets.com/itineraries/spain/">
+              <div class="reco-card__img" style="background-image:url('https://images.unsplash.com/photo-1583422409516-2895a77efded?w=900&q=80');"></div>
+              <div class="reco-card__body">
+                <h3 class="reco-card__heading">Broader Spain loops including Barcelona</h3>
+                <p class="reco-card__rec">We recommend: <strong>Broader Spain loops including Barcelona</strong></p>
+                <ul class="reco-features">
+                  <li><span class="reco-features__dot" aria-hidden="true">✓</span> Iberian pacing once Catalonia alone feels tight.</li>
+                  <li><span class="reco-features__dot" aria-hidden="true">✓</span> AVE-aware sequencing vs fantasy coast-to-coast days.</li>
+                </ul>
+                <span class="reco-card__cta">Browse Spain routes</span>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-nav">
+            <button type="button" id="route-prev" aria-label="Scroll itinerary recommendations left">‹</button>
+            <button type="button" id="route-next" aria-label="Scroll itinerary recommendations right">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap-inner">
+        <h2 class="section-title">Featured tickets &amp; tours — optional placeholder</h2>
+        <p class="optional-note">
+          Omit this block entirely while the site is non-transactional. Restore when catalogue or affiliate rules exist.
+        </p>
+        <div class="product-grid">
+          <div class="product-card">
+            <span class="tag">Barcelona</span>
+            <h4>Sagrada Família timed entry (sample)</h4>
+            <p>Placeholder tile — swap for live catalogue or affiliate rules.</p>
+            <span class="cta">See more info</span>
+          </div>
+          <div class="product-card">
+            <span class="tag">Barcelona</span>
+            <h4>Park Güell monumental zone (sample)</h4>
+            <p>Placeholder tile.</p>
+            <span class="cta">See more info</span>
+          </div>
+          <div class="product-card">
+            <span class="tag">Barcelona</span>
+            <h4>Gothic Quarter small-group walk (sample)</h4>
+            <p>Placeholder tile.</p>
+            <span class="cta">See more info</span>
+          </div>
+          <div class="product-card">
+            <span class="tag">Barcelona</span>
+            <h4>Montserrat half-day rail trip (sample)</h4>
+            <p>Placeholder tile.</p>
+            <span class="cta">See more info</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="daytrips-heading">
+      <div class="wrap-inner">
+        <h2 id="daytrips-heading" class="section-title">Nearby cities &amp; day trips from Barcelona</h2>
+        <p class="section-sub">Same-day out-and-back candidates—verify last trains Sunday evenings before locking dinner reservations downtown.</p>
+
+        <div class="carousel-wrap">
+          <div class="carousel" id="daytrip-carousel" role="region" aria-label="Day trips from Barcelona">
+            <div class="carousel-card">
+              <div class="carousel-card__img">
+                <img src="https://images.unsplash.com/photo-1580349818349-b47879928105?w=800&q=80" width="800" height="428" loading="lazy" decoding="async" alt="Montserrat mountain monastery ridges Catalonia" />
+              </div>
+              <div class="carousel-card__body">
+                <h3>Montserrat monastery</h3>
+                <p>R5 + rack railway (~90 min door-to-mountain realism). Half-day spiritual hikes or choir schedules—skip if cruise fatigue stacks.</p>
+              </div>
+            </div>
+            <div class="carousel-card">
+              <div class="carousel-card__img">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" width="800" height="428" loading="lazy" decoding="async" alt="Calm Mediterranean beach curve Sitges style coastline" />
+              </div>
+              <div class="carousel-card__body">
+                <h3>Sitges</h3>
+                <p>Rodalies Garraf coast (~40 min). Paella lunches, church staircase selfies, calm swim windows outside August weekends.</p>
+              </div>
+            </div>
+            <div class="carousel-card">
+              <div class="carousel-card__img">
+                <img src="https://images.unsplash.com/photo-1568738670879-e70641dc61bc?w=800&q=80" width="800" height="428" loading="lazy" decoding="async" alt="Colourful river houses Girona old town" />
+              </div>
+              <div class="carousel-card__body">
+                <h3>Girona</h3>
+                <p>AVE or Regional (~38–90 min variants). Colourful Onyar houses, cathedral stairs, Jewish quarter lanes—dense cobbles reward trainers.</p>
+              </div>
+            </div>
+            <div class="carousel-card">
+              <div class="carousel-card__img">
+                <img src="https://images.unsplash.com/photo-1560699007-9546d8bf75e6?w=800&q=80" width="800" height="428" loading="lazy" decoding="async" alt="Roman amphitheatre ruins beside the sea Tarragona" />
+              </div>
+              <div class="carousel-card__body">
+                <h3>Tarragona Roman coast</h3>
+                <p>Camp de Tarragona AVE spine (~1 h). Amphitheatre cliffs plus Mediterranean lunch—longer day than Sitges.</p>
+              </div>
+            </div>
+            <div class="carousel-card">
+              <div class="carousel-card__img">
+                <img src="https://images.unsplash.com/photo-1570077188670-e3b8d7341428?w=800&q=80" width="800" height="428" loading="lazy" decoding="async" alt="Mediterranean cove Mallorca turquoise water from above" />
+              </div>
+              <div class="carousel-card__body">
+                <h3>Mallorca flight pinch</h3>
+                <p>Only “same-day” if tight flight dawn returns fit your risk appetite—otherwise treat as overnight cheat.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-nav">
+            <button type="button" id="daytrip-prev" aria-label="Scroll day trips left">‹</button>
+            <button type="button" id="daytrip-next" aria-label="Scroll day trips right">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap-inner">
+        <h2 class="section-title">FAQs</h2>
+        <p class="section-sub">Answer planning-stage searches here—defer exhaustive packing/legal essays to Travel guides or itinerary PDP depth.</p>
+
+        <div class="faq-columns">
+          <div class="faq-columns__col">
+            <details>
+              <summary>How many days in Barcelona is realistic?</summary>
+              <p class="faq-a"><strong>Three full days</strong> covers headline interiors plus Old Town wandering without sprinting. Add nights only when Montserrat, Sitges or Girona joins the brief—each deserves roughly a half-to-full day including transfers.</p>
+            </details>
+            <details>
+              <summary>When is the best time to visit Barcelona for lighter crowds?</summary>
+              <p class="faq-a">Late April–June and mid-September–October typically balance weather with shorter queues; midday Gothic Quarter density still spikes around cruise arrivals—plan buffers even in shoulder seasons.</p>
+            </details>
+            <details>
+              <summary>What Barcelona travel tips save first-timers headaches?</summary>
+              <p class="faq-a">Book Sagrada Família and Park Güell early, guard phones on crowded metro doors, eat closer to local lunch windows when possible, and favour neighbourhood pacing over cross-city Uber hops during festivals.</p>
+            </details>
+          </div>
+          <div class="faq-columns__col">
+            <details>
+              <summary>Beyond Gaudí, what things to do in Barcelona still wow?</summary>
+              <p class="faq-a">Picasso mornings in El Born, MNAC’s Catalan collections atop Montjuïc, harbour cycling segments and indie cinema nights in Gràcia—rotate one slower cultural block between blockbuster tickets.</p>
+            </details>
+            <details>
+              <summary>Which side trips are worth sacrificing a Barcelona night?</summary>
+              <p class="faq-a">Montserrat suits spirituality-plus-views; Sitges delivers seaside calm; Girona rewards walkers tracing medieval lanes—pick based on transport comfort and heat tolerance, not checkbox tourism.</p>
+            </details>
+            <details>
+              <summary>Where can I see the exact day-by-day schedule?</summary>
+              <p class="faq-a">Click through to the <a href="https://tourism-tickets.com/itineraries/barcelona-3-days/">Barcelona itinerary PDP</a> for ordered mornings, museum buffers and dinner pacing—this City page intentionally stays strategic.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>City PDP — definitive Barcelona layout</strong> — Canonical URL pattern <code>https://tourism-tickets.com/spain/barcelona/</code>. Earlier exploratory draft: <code>city-pdp-barcelona-example-v2.html</code>.</p>
+  </footer>
+
+  <script>
+    (function () {
+      function navCarousel(id, prevId, nextId, cardSelector) {
+        var el = document.getElementById(id);
+        var prev = document.getElementById(prevId);
+        var next = document.getElementById(nextId);
+        if (!el || !prev || !next) return;
+        var sel = cardSelector || ".carousel-card";
+        function step(dir) {
+          var card = el.querySelector(sel);
+          var gap = 16;
+          var w = card ? card.offsetWidth : 280;
+          el.scrollBy({ left: dir * (w + gap), behavior: "smooth" });
+        }
+        prev.addEventListener("click", function () { step(-1); });
+        next.addEventListener("click", function () { step(1); });
+      }
+
+      navCarousel("daytrip-carousel", "daytrip-prev", "daytrip-next");
+      navCarousel("attr-carousel", "attr-prev", "attr-next");
+      navCarousel("route-carousel", "route-prev", "route-next", ".reco-card");
+
+      document.querySelectorAll(".tab-module").forEach(function (module) {
+        var tabs = module.querySelectorAll('[role="tab"]');
+        var panels = module.querySelectorAll('[role="tabpanel"]');
+
+        function activate(tab) {
+          tabs.forEach(function (t) {
+            t.setAttribute("aria-selected", t === tab ? "true" : "false");
+          });
+          panels.forEach(function (p) {
+            p.classList.toggle("is-active", p.id === tab.getAttribute("aria-controls"));
+          });
+        }
+
+        tabs.forEach(function (tab) {
+          tab.addEventListener("click", function () { activate(tab); });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
